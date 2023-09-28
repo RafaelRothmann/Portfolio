@@ -7,19 +7,19 @@ function mudarIdiomaHtml(button) {
         case 'secundario':
             if (buttonSecundario[1].innerText == "English" && buttonPrincipal[1].innerText == "Português") {
 
-                buttonPrincipal[0].src = "../archive/images/flags/us-uk-flag.jpg";
+                buttonPrincipal[0].src = "archive/images/flags/us-uk-flag.jpg";
                 buttonPrincipal[1].innerText = "English";
 
-                buttonSecundario[0].src = "../archive/images/flags/Flag-Brazil.png";
+                buttonSecundario[0].src = "archive/images/flags/Flag-Brazil.png";
                 buttonSecundario[1].innerText = "Português";
                 traduzir('us');
 
             } else if (buttonSecundario[1].innerText == "Português" && buttonPrincipal[1].innerText == "English") {
 
-                buttonPrincipal[0].src = "../archive/images/flags/Flag-Brazil.png";
+                buttonPrincipal[0].src = "archive/images/flags/Flag-Brazil.png";
                 buttonPrincipal[1].innerText = "Português";
 
-                buttonSecundario[0].src = "../archive/images/flags/us-uk-flag.jpg";
+                buttonSecundario[0].src = "archive/images/flags/us-uk-flag.jpg";
                 buttonSecundario[1].innerText = "English";
                 traduzir('pt-br');
 
