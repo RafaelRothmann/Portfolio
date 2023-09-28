@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #1f2235;
+    color: white;
+    font-family: Optima, sans-serif;
+}
+
+@media only screen and (min-width: 750px) {
+    header{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .apresentacao .photo{
+        margin: 25px 0;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .apresentacao img{
+        width: 350px;
+    }
+
+    #links{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 463px) {
+    header li{
+        display: grid;
+    }
+
+    header .seletion #seleted{
+        margin-top: 22px;
+    }
+
+    header .flag{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 402px){
+    .apresentacao .photo{
+        display: none;
+    }
+
+    header a, header p{
+        font-size: 12px;
+    }
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+}
+
+header h1 a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    color: #FF4A57;
+}
+
+header h1 a:hover,
+header h1 a:focus {
+    transition: 1.5s;
+    font-size: 24px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 12px;
+}
+
+header nav{
+    display: flex;
+}
+
+header a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 1s;
+}
+
+header ul a:hover,
+header ul a:focus {
+    color: #FF4A57;
+    border-bottom: solid 2px #FF4A57;
+}
+
+header .flag {
+    width: 23px;
+    float: left;
+
+}
+
+header ul button{
+    font-size: 15px;
+    border-radius: 10%;
+    display: flex;
+}
+
+header .seletion {
+   margin-left: 5px;
+}
+
+header .seletion p{
+    margin: 1px 5px;
+    float: right;
+}
+
+
+#seleted{
+    margin-top: 10px;
+}
+
+header .seletion #options{
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+
+.apresentacao {
+    margin: 90px 25px;
+}
+
+.apresentacao .photo {
+    float: right;
+}
+
+#aboutMe{
+    margin: 130px 25px;
+}
+
+.apresentacao #aboutMe h2{
+    display: inline-flex;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.apresentacao #aboutMe p{
+    display: inline;
+    text-align: inherit;
+    margin: 20px 1px;
+    font-weight: 500;
+}
+
+.apresentacao .textaboutMe{
+    margin: 25px 0;
+}
+
+.apresentacao #aboutMe #me{
+    margin-left: 15px;
+}
+
+.apresentacao .socialmedia img{
+    width: 22px;
+    background-color: #FF4A57;
+}
+
+.socialmedia{
+    margin-top: 10px;
+    text-align: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: solid 2px #FF4A57;
+    background-color: #FF4A57;
+}
+
+.sma{
+    margin-right: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
