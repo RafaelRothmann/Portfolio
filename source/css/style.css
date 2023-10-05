@@ -12,7 +12,7 @@
         display: flex;
     }
 
-    .apresentacao .photo{
+    .apresentacao .photo {
         margin: 25px 0;
         display: flex;
         width: 100%;
@@ -20,7 +20,7 @@
         justify-content: center;
         align-items: center;
     }
-
+    
     .apresentacao img {
         width: 350px;
     }
@@ -31,6 +31,11 @@
 }
 
 @media only screen and (max-width: 750px) {
+
+    body section.apresentacao{
+        display: grid;
+    }
+
     .apresentacao .photo {
         margin: 25px 0;
         display: flex;
@@ -52,8 +57,38 @@
         align-items: center;
     }
 
-    #lastnews #news{
+    #lastnews #w{
         display: grid;
+    }
+
+    footer #ft{
+        display: grid;
+    }
+
+    footer h1{
+        text-align: center;
+    }
+
+    footer #resum2{
+        display: none;
+    }
+
+    footer .link{
+        margin: 20px;
+    }
+
+    footer ul li{
+        text-align: center;
+        width: 100px;
+    }
+
+    footer ul li h6{
+        font-size: small;
+    }
+    
+    footer ul li a{
+        text-decoration: none;
+        font-size: xx-small;
     }
 }
 
@@ -81,14 +116,21 @@
     header p {
         font-size: 12px;
     }
+    
+    footer h1{
+        text-align: center;
+    }
+
+    footer p#resum2{
+        text-align: justify;
+        font-size: xx-small;
+    }
+
+    
 }
 
 body {
     overflow-x: hidden;
-}
-
-section{
-    min-width: 100vh;
 }
 
 header {
@@ -138,7 +180,6 @@ header ul a:focus {
 header .flag {
     width: 23px;
     float: left;
-
 }
 
 header ul button {
@@ -293,7 +334,7 @@ footer #resum-footer h1{
     font-size: small;
 }
 
-footer .link{
+.link{
     margin: 0 20px;
 }
 
@@ -301,11 +342,11 @@ footer ul li{
     list-style: none;
 }
 
-footer ul li h6{
+footer h6{
     font-size: medium;
 }
 
-footer ul li a{
+footer a{
     text-decoration: none;
     font-size: small;
 }
@@ -316,10 +357,6 @@ footer #lin{
 
 footer #credits{
     font-size: x-small;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: 20px 0 0;
 }
