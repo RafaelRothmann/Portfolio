@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background-color: #1f2235;
     color: white;
     font-family: Optima, sans-serif;
@@ -11,7 +12,7 @@
         display: flex;
     }
 
-    .apresentacao .photo {
+    .apresentacao .photo{
         margin: 25px 0;
         display: flex;
         width: 100%;
@@ -84,6 +85,10 @@
 
 body {
     overflow-x: hidden;
+}
+
+section{
+    min-width: 100vh;
 }
 
 header {
@@ -213,7 +218,7 @@ header .seletion #options {
 }
 
 #lastnews {
-    margin-top: 208px;
+    margin-top: 130px;
 }
 
 #titlenews{
@@ -234,16 +239,87 @@ header .seletion #options {
     margin: 35px;
 }
 
-.news img {
-    border: #FF4A57 solid 2px;
-    max-width: 100%;
+.info-news{
+    padding: 15px;
 }
 
-.news img:hover{
+.info-news h4{
+    color: #FF4A57;
+    font-size: x-large;
+}
+
+.info-news h5{
+    font-size: small;
+    margin-bottom: 15px;
+}
+
+.info-news p{
+    font-size: small;
+}
+
+.news .info-news {
+    border: #FF4A57 solid 2px;
+    max-width: 400px;
+}
+
+.news .info-news:hover, .news .info-news:focus{
     transition: 1s;
     box-shadow: 1px 1px 60px black;
 }
 
-#lastnews #titlenews, #lastnews  h2, #w{
-    background-color: #1f2335;
+
+#ft, #resum-footer, #lin, footer h1, footer h6, footer a, footer ul li, footer p,footer ul{
+    background-color: rgb(17, 15, 15);
+}
+
+#ft{
+    margin-top: 130px;
+    display: flex;
+    padding: 50px;
+    justify-content: space-around;
+}
+
+footer #resum-footer h1{
+    color: #ff4a57;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+}
+
+#resum-footer{
+    width: 400px;
+}
+
+#resum2{
+    font-size: small;
+}
+
+footer .link{
+    margin: 0 20px;
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer ul li h6{
+    font-size: medium;
+}
+
+footer ul li a{
+    text-decoration: none;
+    font-size: small;
+}
+
+footer #lin{
+    display: flex;
+}
+
+footer #credits{
+    font-size: x-small;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0;
 }
