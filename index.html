@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="source/css/style.css">
     <script src="source/js/translation.js"></script>
     <script src="source/js/sistem.js"></script>
+    <link rel="shortcut icon" href="archive/icon/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-
     <header>
         <h1><a href="index.html">RAFAEL ROTHMANN</a></h1>
         <nav>
@@ -25,7 +25,7 @@
                 </div>
 
                 <div id="options" onmouseover="mostrarLinguagens()" onmouseout="esconderLinguagens()">
-                    <button onclick="mudarIdiomaHtml('secundario')">
+                    <button onclick="mudarIdiomaIndex('secundario')">
                         <img id="secundario" class="flag" src="archive/images/flags/us-uk-flag.jpg">
                         <p id="2">English</p>
                     </button>
@@ -40,13 +40,10 @@
         </nav>
     </header>
 
-    <div class="apresentacao">
+
+    <section class="apresentacao">
         <div id="aboutMe">
             <h2 id="imsd">Eu sou um Desenvolvedor de Software</h2>
-            <div class="photo">
-                <img src="archive/images/photo/perfil(1).png" alt="Profile Picture">
-            </div>
-
 
             <div class="textaboutMe">
                 <p id="me">Me</p>
@@ -60,28 +57,28 @@
             <div id="links">
                 <a class="sma" href="https://www.instagram.com/rafaelrothmann/?hl=en" target="_blank">
                     <button class="socialmedia">
-                        <img src="archive/images/social-media-logo/instagram.png" alt="Instagram">   
+                        <img src="archive/images/social-media-logo/instagram.png" alt="Instagram">
                     </button>
                 </a>
-                
+
                 <a class="sma" href="mailto:rafinharothmann@gmail.com.br?" target="_blank">
                     <button class="socialmedia">
                         <img id="email" src="archive/images/social-media-logo/gmail.png" alt="Gmail">
                     </button>
                 </a>
-                
+
                 <a class="sma" href="https://github.com/RafaelRothmann" target="_blank">
                     <button class="socialmedia">
                         <img src="archive/images/social-media-logo/github.png" alt="GitHub">
                     </button>
                 </a>
-                
+
                 <a class="sma" href="https://www.linkedin.com/in/rafael-m-rothmann/" target="_blank">
                     <button class="socialmedia">
                         <img src="archive/images/social-media-logo/linkedin.png" alt="Linkedin">
                     </button>
                 </a>
-                
+
                 <a class="sma" href="http://lattes.cnpq.br/6598820284736318" target="_blank">
                     <button class="socialmedia">
                         <img src="archive/images/social-media-logo/lattes.png" alt="Lattes">
@@ -90,8 +87,98 @@
             </div>
 
         </div>
-    </div>
 
+        <div class="photo">
+            <img src="archive/images/photo/perfil(1).png" alt="Profile Picture">
+        </div>
+
+    </section>
+
+    <section id="lastnews">
+        <div id="titlenews">
+            <h2 id="tnews">Últimas Noticias</h2>
+        </div>
+
+        <div id="w">
+            <div class="news">
+                <a id="n1">
+                    <article class="info-news">
+                        <h4 id="n1-title">Curso de Lua</h4>
+                        <h5 id="n1-org">Organização: Udemy</h5>
+                        <p id="n1-time">Duração: 4h</p>
+                    </article>
+                </a>
+            </div>
+
+            <div class="news">
+                <a id="n2">
+                    <article class="info-news">
+                        <h4 id="n2-title">Curso de GitHub</h4>
+                        <h5 id="n2-org">Organização: Microsoft</h5>
+                        <p id="n2-time">Duração: 1h52min</p>
+                    </article>
+                </a>
+            </div>
+
+            <div class="news">
+                <a id="n3">
+                    <article class="info-news">
+                        <h4 id="n3-title">Participação Erad</h4>
+                        <h5 id="n3-org">Organização: SBC</h5>
+                        <p id="n3-time">Duração: 24h</p>
+                    </article>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div id="ft">
+            <div id="resum-footer">
+                <h1>RAFAEL ROTHMANN</h1>
+                <p id="resum2">Tenho 19 anos e este é o meu site de portfolio, onde compartilho os projetos e eventos em
+                    que participei ao longo dos anos. Aqui, você encontrará uma variedade de trabalhos que representam
+                    meu crescimento e dedicação na area da Tecnologia. Espero que essas experiências demonstrem minha
+                    paixão pelo aprendizado e minha determinação em contribuir de forma significativa em diferentes
+                    projetos e eventos.</p>
+            </div>
+            <div id="lin">
+                <ul class="link">
+                    <li>
+                        <h6 id="allC">Todos os Conteúdos</h6>
+                    </li>
+                    <li><a href="#aboutMe" id="aM">Sobre mim</a></li>
+                    <li><a href="#lastnews" id="lN">Ultimas Noticias</a></li>
+                    <li><a href="#" id="cV">Currículo</a></li>
+                    <li><a href="#" id="pJ">Projetos</a></li>
+                    <li><a href="#" id="cTT">Contato</a></li>
+                </ul>
+                <ul class="link">
+                    <li>
+                        <h6 id="fA">Formação Academica</h6>
+                    </li>
+                    <li><a href="#" id="eV">Eventos</a></li>
+                    <li><a href="#" id="gR">Gradução</a></li>
+                    <li><a href="#" id="cR">Cursos</a></li>
+                </ul>
+                <ul class="link">
+                    <li>
+                        <h6 id="projects">Projetos</h6>
+                    </li>
+                    <li><a href="https://github.com/RafaelRothmann/Portfolio" id="wS" target="_blank">Protifolio</a>
+                    </li>
+                    <li><a href="https://github.com/RafaelRothmann/Chess-System_Java-Project" id="cS"
+                            target="_blank">Chess System</a></li>
+                    <li><a href="https://github.com/RafaelRothmann/Beecrowd-Cpp" id="bC" target="_blank">Beecrowd
+                            Cpp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p id="credits">2023 © Rafael Melo Rothmann</p>
+        </div>
+    </footer>
 </body>
 
 </html>

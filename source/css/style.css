@@ -1,19 +1,46 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background-color: #1f2235;
     color: white;
     font-family: Optima, sans-serif;
 }
 
+*::selection{
+    background-color: black;
+}
+
 @media only screen and (min-width: 750px) {
-    header{
+    header {
         display: flex;
+    }
+
+    .apresentacao .photo {
+        margin: 25px 0;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .apresentacao img {
+        width: 350px;
+    }
+
+    #lastnews #news{
+        display: grid;
     }
 }
 
 @media only screen and (max-width: 750px) {
-    .apresentacao .photo{
+
+    body section.apresentacao{
+        display: grid;
+    }
+
+    .apresentacao .photo {
         margin: 25px 0;
         display: flex;
         width: 100%;
@@ -22,46 +49,97 @@
         align-items: center;
     }
 
-    .apresentacao img{
+    .apresentacao img {
         width: 350px;
     }
 
-    #links{
+    #links {
         display: flex;
         width: 100%;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
-}
 
-@media only screen and (max-width: 463px) {
-    header li{
+    #lastnews #w{
         display: grid;
     }
 
-    header .seletion #seleted{
+    footer #ft{
+        display: grid;
+    }
+
+    footer h1{
+        text-align: center;
+    }
+
+    footer #resum2{
+        display: none;
+    }
+
+    footer .link{
+        margin: 20px;
+    }
+
+    footer ul li{
+        text-align: center;
+        width: 100px;
+    }
+
+    footer ul li h6{
+        font-size: small;
+    }
+    
+    footer ul li a{
+        text-decoration: none;
+        font-size: xx-small;
+    }
+}
+
+@media only screen and (max-width: 463px) {
+    header li {
+        display: grid;
+    }
+
+    header .seletion #seleted {
         margin-top: 22px;
     }
 
-    header .flag{
+    header .flag {
         display: none;
     }
 
 }
 
-@media only screen and (max-width: 402px){
-    .apresentacao .photo{
+@media only screen and (max-width: 402px) {
+    .apresentacao .photo {
         display: none;
     }
 
-    header a, header p{
+    header a,
+    header p {
         font-size: 12px;
     }
+    
+    footer h1{
+        text-align: center;
+    }
+
+    footer p#resum2{
+        text-align: justify;
+        font-size: xx-small;
+    }
+
+    
+}
+
+body {
+    overflow-x: hidden;
 }
 
 header {
-    position: sticky;
+    position: fixed;
+    top: 0;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -71,7 +149,7 @@ header {
 header h1 a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px;
-    color: #FF4A57;
+    color: #ff4a57;
 }
 
 header h1 a:hover,
@@ -86,7 +164,7 @@ header nav ul {
     padding: 12px;
 }
 
-header nav{
+header nav {
     display: flex;
 }
 
@@ -106,74 +184,69 @@ header ul a:focus {
 header .flag {
     width: 23px;
     float: left;
-
 }
 
-header ul button{
+header ul button {
     font-size: 15px;
     border-radius: 10%;
     display: flex;
 }
 
 header .seletion {
-   margin-left: 5px;
+    margin-left: 5px;
 }
 
-header .seletion p{
+header .seletion p {
     margin: 1px 5px;
     float: right;
 }
 
 
-#seleted{
+#seleted {
     margin-top: 10px;
 }
 
-header .seletion #options{
+header .seletion #options {
     visibility: hidden;
     transition: 0.5s;
 }
 
-
 .apresentacao {
+    display: flex;
     margin: 90px 25px;
 }
 
-.apresentacao .photo {
-    float: right;
-}
-
-#aboutMe{
+#aboutMe {
     margin: 130px 25px;
 }
 
-.apresentacao #aboutMe h2{
+.apresentacao #aboutMe h2 {
     display: inline-flex;
     font-size: 30px;
     font-weight: bold;
 }
 
-.apresentacao #aboutMe p{
+.apresentacao #aboutMe p {
     display: inline;
     text-align: inherit;
     margin: 20px 1px;
     font-weight: 500;
 }
 
-.apresentacao .textaboutMe{
+.apresentacao .textaboutMe {
     margin: 25px 0;
 }
 
-.apresentacao #aboutMe #me{
+.apresentacao #aboutMe #me {
     margin-left: 15px;
 }
 
-.apresentacao .socialmedia img{
+.apresentacao .socialmedia img {
     width: 22px;
     background-color: #FF4A57;
 }
 
-.socialmedia{
+.socialmedia {
     margin-top: 10px;
     text-align: center;
     width: 42px;
@@ -183,9 +256,111 @@ header .seletion #options{
     background-color: #FF4A57;
 }
 
-.sma{
+.sma {
     margin-right: 10px;
     text-decoration: none;
     list-style: none;
 }
 
+#lastnews {
+    margin-top: 130px;
+}
+
+#titlenews{
+    padding-top: 50px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#w{
+    display: flex;
+    justify-content: center;
+}
+
+.news{
+    margin: 35px;
+}
+
+.info-news{
+    padding: 15px;
+}
+
+.info-news h4{
+    color: #FF4A57;
+    font-size: x-large;
+}
+
+.info-news h5{
+    font-size: small;
+    margin-bottom: 15px;
+}
+
+.info-news p{
+    font-size: small;
+}
+
+.news .info-news {
+    border: #FF4A57 solid 2px;
+    max-width: 400px;
+}
+
+.news .info-news:hover, .news .info-news:focus{
+    transition: 1s;
+    box-shadow: 1px 1px 60px black;
+}
+
+
+#ft, #resum-footer, #lin, footer h1, footer h6, footer a, footer ul li, footer p,footer ul{
+    background-color: rgb(17, 15, 15);
+}
+
+#ft{
+    margin-top: 130px;
+    display: flex;
+    padding: 50px;
+    justify-content: space-around;
+}
+
+footer #resum-footer h1{
+    color: #ff4a57;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+}
+
+#resum-footer{
+    width: 400px;
+}
+
+#resum2{
+    font-size: small;
+}
+
+.link{
+    margin: 0 20px;
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer h6{
+    font-size: medium;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: small;
+}
+
+footer #lin{
+    display: flex;
+}
+
+footer #credits{
+    font-size: x-small;
+    text-align: center;
+    padding: 20px 0 0;
+}
