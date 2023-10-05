@@ -7,6 +7,10 @@
     font-family: Optima, sans-serif;
 }
 
+*::selection{
+    background-color: black;
+}
+
 @media only screen and (min-width: 750px) {
     header {
         display: flex;
