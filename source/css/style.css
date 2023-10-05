@@ -10,6 +10,23 @@
     header {
         display: flex;
     }
+
+    .apresentacao .photo {
+        margin: 25px 0;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .apresentacao img {
+        width: 350px;
+    }
+
+    #lastnews #news{
+        display: grid;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -145,11 +162,8 @@ header .seletion #options {
 }
 
 .apresentacao {
+    display: flex;
     margin: 90px 25px;
-}
-
-.apresentacao .photo {
-    float: right;
 }
 
 #aboutMe {
@@ -200,12 +214,10 @@ header .seletion #options {
 
 #lastnews {
     margin-top: 208px;
-    border-top: #FF4A57 solid 5px;
-    display: grid;
-    
 }
 
 #titlenews{
+    padding-top: 50px;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -213,34 +225,25 @@ header .seletion #options {
     align-items: center;
 }
 
-#lastnews{
-    text-align: center;
-    margin: 10px;
+#w{
+    display: flex;
+    justify-content: center;
 }
 
 .news{
-    margin: 50px;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    margin: 35px;
 }
 
-.news h3 {
+.news img {
     border: #FF4A57 solid 2px;
-    color: black;
-    font-style: bold;
-    padding: 100px;
-    background: url(../../archive/images/certificates/certificate-Lua.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: start;
-    font-size: medium;
-    width: 33%;
+    max-width: 100%;
 }
 
-.news h3:hover{
+.news img:hover{
     transition: 1s;
-    padding: 110px;
+    box-shadow: 1px 1px 60px black;
+}
+
+#lastnews #titlenews, #lastnews  h2, #w{
+    background-color: #1f2535;
 }

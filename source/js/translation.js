@@ -1,8 +1,26 @@
-function mudarIdiomaHtml(button) {
+function news() {
+    const id_news = ["n1", "n2", "n3"];
+    const buttonPrincipal = [document.getElementById("principal"), document.getElementById("1")];
 
+    if(buttonPrincipal == "Português"){
+        const news_ptbr = ["Portifólio", "Curso de Lua", "Erad(2023)"];
+        
+        for (let i = 0; i < 3; i++) {
+            document.getElementById(id_news[i]).innerText = news_ptbr[i];
+        }
+    } else if (buttonPrincipal == "English"){
+        const news_usuk = ["Portifólio", "Course of Lua", "Erad(2023)"];
+        
+        for (let i = 0; i < 3; i++) {
+            document.getElementById(id_news[i]).innerText = news_usuk[i];
+        }
+    }
+}
+
+function mudarIdiomaHtml(button) {
     const buttonPrincipal = [document.getElementById("principal"), document.getElementById("1")];
     const buttonSecundario = [document.getElementById("secundario"), document.getElementById("2")];
-
+    
     switch (button) {
         case 'secundario':
             if (buttonSecundario[1].innerText == "English" && buttonPrincipal[1].innerText == "Português") {
@@ -13,6 +31,7 @@ function mudarIdiomaHtml(button) {
                 buttonSecundario[0].src = "archive/images/flags/Flag-Brazil.png";
                 buttonSecundario[1].innerText = "Português";
                 traduzir('us');
+                news();
 
             } else if (buttonSecundario[1].innerText == "Português" && buttonPrincipal[1].innerText == "English") {
 
@@ -22,7 +41,7 @@ function mudarIdiomaHtml(button) {
                 buttonSecundario[0].src = "archive/images/flags/us-uk-flag.jpg";
                 buttonSecundario[1].innerText = "English";
                 traduzir('pt-br');
-
+                news();
             }
             break;
     }
