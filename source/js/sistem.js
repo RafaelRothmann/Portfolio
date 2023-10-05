@@ -1,5 +1,3 @@
-mudarImagemnoticias();
-
 function mudarImagemnoticias(){
     const news = ["archive/images/certificates/certificate-Lua.jpg","archive/images/certificates/certificate-Lua.jpg","archive/images/certificates/certificate-Lua.jpg"];
 

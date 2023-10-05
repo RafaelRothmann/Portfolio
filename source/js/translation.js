@@ -51,14 +51,14 @@ function mudarIdiomaHtml(button) {
 function traduzir(lang) {
 
     const ids = [
-        "aboutme", "cv", "project", "contact", "imsd", "me", "resum"
+        "aboutme", "cv", "project", "contact", "imsd", "me", "resum","tnews"
     ];
 
     switch (lang) {
         case 'us':
 
             const usuk = [
-                "About Me", "Resume", "Project", "Contact", "I'm a Software Developer", "I", "graduated from high school in 2022, and in the following year, I enrolled at the University of Software Engineering. During this period, I improved my skills, resulting in several small projects hosted on GitHub. I possess knowledge of languages such as Java, JavaScript, C++, Lua, HTML, and CSS, as well as Git and UML, which allows me to contribute more effectively to group work."
+                "About Me", "Resume", "Project", "Contact", "I'm a Software Developer", "I", "graduated from high school in 2022, and in the following year, I enrolled at the University of Software Engineering. During this period, I improved my skills, resulting in several small projects hosted on GitHub. I possess knowledge of languages such as Java, JavaScript, C++, Lua, HTML, and CSS, as well as Git and UML, which allows me to contribute more effectively to group work.","Last News"
             ]
 
             for (let index = 0; index < ids.length; index++) {
@@ -69,7 +69,7 @@ function traduzir(lang) {
         case 'pt-br':
 
             const ptbr = [
-                "Sobre Mim", "Currículo", "Projetos", "Contato", "Eu sou um Desenvolvedor de Software", "Me", "formei no ensino médio em 2022 e, no ano seguinte, ingressei na faculdade de Engenharia de Software. Durante esse período, dediquei-me a aprimorar minhas habilidades técnicas, resultando em diversos mini projetos hospedados no GitHub. Possuo conhecimento sólido em linguagens como Java, Javascript, C++, Lua, HTML e CSS, além de dominar ferramentas como Git e UML, o que me permite contribuir de forma eficaz em projetos de equipe."
+                "Sobre Mim", "Currículo", "Projetos", "Contato", "Eu sou um Desenvolvedor de Software", "Me", "formei no ensino médio em 2022 e, no ano seguinte, ingressei na faculdade de Engenharia de Software. Durante esse período, dediquei-me a aprimorar minhas habilidades técnicas, resultando em diversos mini projetos hospedados no GitHub. Possuo conhecimento sólido em linguagens como Java, Javascript, C++, Lua, HTML e CSS, além de dominar ferramentas como Git e UML, o que me permite contribuir de forma eficaz em projetos de equipe.","Ultimas Noticias"
             ];
 
             for (let index = 0; index < ids.length; index++) {

@@ -98,7 +98,7 @@ header {
 header h1 a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px;
-    color: #FF4A57;
+    color: #ff4a57;
 }
 
 header h1 a:hover,
@@ -245,5 +245,5 @@ header .seletion #options {
 }
 
 #lastnews #titlenews, #lastnews  h2, #w{
-    background-color: #1f2535;
+    background-color: #1f2335;
 }
