@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo | Rafael Rothmann</title>
+    <link rel="stylesheet" href="../css/footerandheader.css">
+    <link rel="stylesheet" href="../css/resume.css">
+    <script src="../js/translation.js"></script>
+    <script src="../js/sistem.js"></script>
+    <script src="../js/certificates.js"></script>
+    <link rel="shortcut icon" href="../../archive/icon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1><a id="home" href="../../index.html">RAFAEL ROTHMANN</a></h1>
+        <nav>
+            <div class="seletion" onmouseover="sistem.mostrarLinguagens()" onmouseout="sistem.esconderLinguagens()">
+                <div id="seleted">
+                    <button disabled>
+                        <img id="principal" class="flag" src="../../archive/images/flags/Flag-Brazil.png">
+                        <p id="1-idioma">Português</p>
+                    </button>
+                </div>
+                <div id="options">
+                    <button id="button-2" onclick="window.location.href='resume.html?lang=us'">
+                        <img id="secundario" class="flag" src="../../archive/images/flags/us-uk-flag.jpg">
+                        <p id="2-idioma">English</p>
+                    </button>
+                </div>
+            </div>
+            <ul>
+                <li><a id="aboutme" href="../../index.html#aboutMe">Sobre Mim</a></li>
+                <li><a id="cv" href="resume.html">Currículo</a></li>
+                <li><a id="project" href="#">Projetos</a></li>
+                <li><a id="contact" href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="resume1">
+        <div id="apresent">
+            <div id="name">
+                <h1>RAFAEL ROTHMANN</h1>
+                <p id="resuM">Tenho 19 anos e atualmente curso Engenharia de Software na PUCRS. Resido em Porto Alegre, Rio Grande do Sul, onde busco oportunidades para aplicar e aprimorar os conhecimentos adquiridos em sala de aula. Minha paixão por programação e desenvolvimento de software me motiva a buscar um estágio que não apenas complementará minha formação acadêmica, mas também me proporcionará experiências práticas enriquecedoras. Nesta página, você encontrará um registro detalhado de minhas atividades acadêmicas e conquistas até o momento.</p>
+            </div>
+            <img src="../../archive/images/photo/perfil(1).png">
+        </div>
+        <div id="graduted" class="r">
+            <h2 id="ae">Formação acadêmica</h2>
+            <div class="t">
+                <img class="company" src="../../archive/images/company/pucrs.png">
+                <div class="info">
+                    <h3>PUCRS - Pontifícia Universidade Católica do Rio Grande do Sul</h3>
+                    <p id="engenharia">Bacharelado em Engenharia de Software</p>
+                    <p class="time">Jul 2023 - Dez 2026</p>
+                </div>
+            </div>
+            <div class="t">
+                <img class="company" src="../../archive/images/company/lssa.png">
+                <div class="info">
+                    <h3 id="lssa">LSSA - Colégio La Salle Santo Antônio</h3>
+                    <p id="school">Ensino Médio Completo</p>
+                    <p class="time">Fev 2020 - Dez 2022</p>
+                </div>
+            </div>
+        </div>
+        <div id="courses" class="r">
+            <h2 id="cer">Certificados</h2>
+            <div class="t">
+                <img class="company" src="../../archive/images/company/udemy.png">
+                <div class="info">
+                    <h3 id="LuaUDEMY">Aprenda a programar em Lua</h3>
+                    <p>Udemy</p>
+                    <p class="time">Verificação emitida em Set 2023</p>
+                    <p class="time">Duração: 4 horas</p>
+                    <p class="credencial">Código da credencial: UC-fa5e6ff6-148a-4c92-8d9e-8a09e53008d8</p>
+                    <button class="credencial" onclick="certificates.openCertificate('LuaUDEMY')">Exibir credencial</button>
+                </div>
+            </div>
+            <div class="t">
+                <img class="company" src="../../archive/images/company/microsoft.png">
+                <div class="info">
+                    <h3 id="MCGITHUB2023">Conceitos Básicos de GitHub - Noções básicas de administração e recursos do produto</h3>
+                    <p>Microsoft</p>
+                    <p class="time">Verificação emitida em Maio 2023</p>
+                    <p class="time">Duração: 1 hora 52 minutos</p>
+                    <button class="credencial" onclick="certificates.openCertificate('MCGITHUB2023')">Exibir credencial</button>
+                </div>
+            </div>
+        </div>
+        <div id="events" class="r">
+            <h2 id="even">Eventos</h2>
+            <div class="t">
+                <img class="company" src="../../archive/images/company/sbc.png">
+                <div class="info">
+                    <h3 id="ERAD2023">XXIII Escola Regional de Alto Desempenho da Região Sul</h3>
+                    <p>Sociedade Brasileira de Computação - SBC</p>
+                    <p class="time">Verificação emitida em Maio 2023</p>
+                    <p class="time">Duração: 24 horas</p>
+                    <button class="credencial" onclick="certificates.openCertificate('ERAD2023')">Exibir credencial</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="ft">
+            <div id="resum-footer">
+                <h1>RAFAEL ROTHMANN</h1>
+                <p id="resum2">Tenho 19 anos e este é o meu site de portfolio, onde compartilho os projetos e eventos em
+                    que participei ao longo dos anos. Aqui, você encontrará uma variedade de trabalhos que representam
+                    meu crescimento e dedicação na area da Tecnologia. Espero que essas experiências demonstrem minha
+                    paixão pelo aprendizado e minha determinação em contribuir de forma significativa em diferentes
+                    projetos e eventos.</p>
+            </div>
+            <div id="lin">
+                <ul class="link">
+                    <li>
+                        <h6 id="allC">Todos os Conteúdos</h6>
+                    </li>
+                    <li><a href="../../index.html#aboutMe" id="aM">Sobre mim</a></li>
+                    <li><a href="../../index.html#lastnews" id="lN">Ultimas Noticias</a></li>
+                    <li><a href="resume.html" id="cV">Currículo</a></li>
+                    <li><a href="#" id="pJ">Projetos</a></li>
+                    <li><a href="#" id="cTT">Contato</a></li>
+                </ul>
+                <ul class="link">
+                    <li>
+                        <h6 id="fA">Formação Academica</h6>
+                    </li>
+                    <li><a href="#" id="eV">Eventos</a></li>
+                    <li><a href="#" id="gR">Gradução</a></li>
+                    <li><a href="#" id="cR">Cursos</a></li>
+                </ul>
+                <ul class="link">
+                    <li>
+                        <h6 id="projects">Projetos</h6>
+                    </li>
+                    <li><a href="https://github.com/RafaelRothmann/Portfolio" id="wS" target="_blank">Protifolio</a>
+                    </li>
+                    <li><a href="https://github.com/RafaelRothmann/Chess-System_Java-Project" id="cS"
+                            target="_blank">Chess System</a></li>
+                    <li><a href="https://github.com/RafaelRothmann/Beecrowd-Cpp" id="bC" target="_blank">Beecrowd
+                            Cpp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p id="credits">2023 © Rafael Melo Rothmann</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+
+    window.onload = function() {
+     
+        if (location.href.includes("?lang=us")) {
+            translation.mudarIdioma("us", "resume");
+
+        } else if (location.href.includes("?lang=pt-br")) {
+            translation.mudarIdioma("pt-br", "resume");
+        } else {
+            translation.mudarIdioma("pt-br", "resume");
+        }
+
+        sistem.versaoSite();
+    }
+
+</script>
+
+</html>
