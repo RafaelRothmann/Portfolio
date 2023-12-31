@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Rafael Rothmann</title>
+    <title>Início | Rafael Rothmann</title>
     <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="source/css/footerandheader.css">
     <script src="source/js/translation.js"></script>
     <script src="source/js/sistem.js"></script>
     <link rel="shortcut icon" href="archive/icon/favicon.ico" type="image/x-icon">
@@ -13,27 +14,27 @@
 
 <body>
     <header>
-        <h1><a href="index.html">RAFAEL ROTHMANN</a></h1>
+        <h1><a id="home" href="index.html">RAFAEL ROTHMANN</a></h1>
         <nav>
-            <div class="seletion">
+            <div class="seletion" onmouseover="sistem.mostrarLinguagens()" onmouseout="sistem.esconderLinguagens()">
 
                 <div id="seleted">
-                    <button onmouseover="mostrarLinguagens()" onmouseout="esconderLinguagens()" disabled>
+                    <button disabled>
                         <img id="principal" class="flag" src="archive/images/flags/Flag-Brazil.png">
-                        <p id="1">Português</p>
+                        <p id="1-idioma">Português</p>
                     </button>
                 </div>
 
-                <div id="options" onmouseover="mostrarLinguagens()" onmouseout="esconderLinguagens()">
-                    <button onclick="mudarIdiomaIndex('secundario')">
+                <div id="options">
+                    <button id="button-2" onclick="window.location.href = 'index.html?lang=us'">
                         <img id="secundario" class="flag" src="archive/images/flags/us-uk-flag.jpg">
-                        <p id="2">English</p>
+                        <p id="2-idioma">English</p>
                     </button>
                 </div>
             </div>
             <ul>
                 <li><a id="aboutme" href="#aboutMe">Sobre Mim</a></li>
-                <li><a id="cv" href="#">Currículo</a></li>
+                <li><a id="cv" href="source/pages/resume.html?lang=pt-br">Currículo</a></li>
                 <li><a id="project" href="#">Projetos</a></li>
                 <li><a id="contact" href="#">Contato</a></li>
             </ul>
@@ -47,7 +48,7 @@
 
             <div class="textaboutMe">
                 <p id="me">Me</p>
-                <p id="resum">formei no ensino médio em 2022 e, no ano seguinte, ingressei na faculdade de Engenharia de
+                <p id="resum" translate="yes">formei no ensino médio em 2022 e, no ano seguinte, ingressei na faculdade de Engenharia de
                     Software. Durante esse período, dediquei-me a aprimorar minhas habilidades técnicas, resultando em
                     diversos mini projetos hospedados no GitHub. Possuo conhecimento sólido em linguagens como Java,
                     Javascript, C++, Lua, HTML e CSS, além de dominar ferramentas como Git e UML, o que me permite
@@ -150,7 +151,7 @@
                     </li>
                     <li><a href="#aboutMe" id="aM">Sobre mim</a></li>
                     <li><a href="#lastnews" id="lN">Ultimas Noticias</a></li>
-                    <li><a href="#" id="cV">Currículo</a></li>
+                    <li><a href="source/pages/resume.html?lang=pt-br" id="cV">Currículo</a></li>
                     <li><a href="#" id="pJ">Projetos</a></li>
                     <li><a href="#" id="cTT">Contato</a></li>
                 </ul>
@@ -158,7 +159,7 @@
                     <li>
                         <h6 id="fA">Formação Academica</h6>
                     </li>
-                    <li><a href="#" id="eV">Eventos</a></li>
+                    <li><a href="source/pages/resume.html?lang=pt-br#events" id="eV">Eventos</a></li>
                     <li><a href="#" id="gR">Gradução</a></li>
                     <li><a href="#" id="cR">Cursos</a></li>
                 </ul>
@@ -176,9 +177,28 @@
             </div>
         </div>
         <div>
-            <p id="credits">2023 © Rafael Melo Rothmann</p>
+            <p id="credits">2024 © Rafael Melo Rothmann</p>
         </div>
     </footer>
 </body>
+
+<script>
+    
+    window.onload = function() {
+     
+        if (location.href.includes("?lang=us")) {
+            translation.mudarIdioma("us", "index");
+        
+        } else if (location.href.includes("?lang=pt-br")) {
+            translation.mudarIdioma("pt-br", "index");
+        } else {
+            translation.mudarIdioma("pt-br", "index");
+        }
+
+        sistem.versaoSite();
+    }
+
+
+</script>
 
 </html>

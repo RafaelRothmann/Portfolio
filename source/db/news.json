@@ -1,0 +1,58 @@
+[
+    {
+        "n1": {
+            "n1-title": [
+                "Curso de Lua",
+                "Course of Lua"
+            ],
+            "n1-org": [
+                "Organização: Udemy",
+                "Company: Udemy"
+            ],
+            "n1-time": [
+                "Duração: 4 horas",
+                "Duration: 4 hours"
+            ],
+            "n1-link": [
+                "source/pages/certificates.html?lang=pt-br&course=LuaUDEMY",
+                "source/pages/certificates.html?lang=us&course=LuaUDEMY"
+            ]
+        },
+        "n2": {
+            "n2-title": [
+                "Curso de GitHub",
+                "Course of GitHub"
+            ],
+            "n2-org": [
+                "Organização: Microsoft",
+                "Company: Microsoft"
+            ],
+            "n2-time": [
+                "Duração: 2 horas",
+                "Duration: 2 hours"
+            ],
+            "n2-link": [
+                "source/pages/certificates.html?lang=pt-br&course=MCGITHUB2023",
+                "source/pages/certificates.html?lang=us&course=MCGITHUB2023"
+            ]
+        },
+        "n3": {
+            "n3-title": [
+                "Participação Erad",
+                "Participation Erad"
+            ],
+            "n3-org": [
+                "Organização: SBC",
+                "Company: SBC"
+            ],
+            "n3-time": [
+                "Duração: 24 horas",
+                "Duration: 24 hours"
+            ],
+            "n3-link": [
+                "source/pages/certificates.html?lang=pt-br&course=ERAD2023",
+                "source/pages/certificates.html?lang=us&course=ERAD2023"
+            ]
+        }
+    }
+]

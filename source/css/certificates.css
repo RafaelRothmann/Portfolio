@@ -1,0 +1,40 @@
+@media only screen and (max-width: 671px) {
+    *{
+        overflow-x: hidden;
+    }
+
+    #certificate{
+        display: grid;
+        margin: 130px 0 0 0;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #course{
+        display: inline-block;
+        width: calc(100% - 50px);
+    }
+}
+
+#certificate{
+    margin: 130px 0  25px;
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+#titleCertificate{
+    font-size: xx-large;
+}
+
+#course{
+    max-width: 100vh;
+}
+
+#desc{
+    font-size: large;
+    display: grid;
+    gap: 3px;
+}
