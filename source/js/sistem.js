@@ -9,10 +9,10 @@ class sistem {
     }
 
     static verLinguagem(page) {
-        if (location.href.includes("?lang=us")) {
+        if (location.href.includes("lang=us")) {
             translation.mudarIdioma("us", page);
 
-        } else if (location.href.includes("?lang=pt-br")) {
+        } else if (location.href.includes("lang=pt-br")) {
             translation.mudarIdioma("pt-br", page);
 
         } else {

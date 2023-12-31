@@ -28,7 +28,11 @@ class certificates {
             params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
         });
 
-        this.changePage(params['course'], params['lang'])
+        if (params['lang'] != 'us' && params['lang'] != 'pt-br') {
+            params['lang'] = 'pt-br';
+        }
+
+        this.changePage(params['course'], params['lang']);
     }
 
     static changePage(course, lang) {
