@@ -313,7 +313,7 @@ class translation {
     static traduzirTime(lang) {
         var time = document.getElementsByClassName("time")
         const pt_br = ["Dez", "Abr", "Fev", "Jul", "Jun", "Maio", "Ago", "Set", "Out", "horas", "hora", "minutos","Duração:","Verificação emitida em"]
-        const us = ["Dec", "Apr", "Feb", "July", "June", "May", "Aug", "Sept", "Oct", "hours", "hour", "minutes","Duration:","Issued in"]
+        const us = ["Dec", "Apr", "Feb", "July", "June", "May", "Aug", "Sept", "Oct", "hours", "hour", "minutes","Duration:","Issued on"]
 
         switch (lang) {
             case 'us':

@@ -34,7 +34,7 @@ class certificates {
     static changePage(course, lang) {
         translation.mudarIdioma(lang, 'certificates');
         sistem.versaoSite();
-        var arquivo,titulo,desc1,desc2,desc3,desc4;
+        var arquivo, titulo, desc1, desc2, desc3, desc4;
 
         switch (course) {
             case 'LuaUDEMY':
@@ -51,12 +51,11 @@ class certificates {
                         titulo = "Learn to program in Lua";
                         desc1 = "Company: Udemy";
                         desc2 = "Duration: 4 hours";
-                        desc3 = "Issued in September 2023";
+                        desc3 = "Issued on September 2023";
                         desc4 = "Credential Code: UC-fa5e6ff6-148a-4c92-8d9e-8a09e53008d8";
 
                         break;
                 }
-
 
                 arquivo = "LuaUDEMY.jpg";
 
@@ -75,7 +74,7 @@ class certificates {
                         titulo = "Basic Concepts of GitHub - Basic Notions of Administration and Product Features";
                         desc1 = "Company: Microsoft";
                         desc2 = "Duration: 1 hour 52 minutes";
-                        desc3 = "Issued in May 2023";
+                        desc3 = "Issued on May 2023";
                         desc4 = " ";
 
                         break;
@@ -97,7 +96,7 @@ class certificates {
                         titulo = "XXIII Regional High Performance School of the Southern Region";
                         desc1 = "Company: Sociedade Brasileira de Computação (SBC)";
                         desc2 = "Duration: 24 hours";
-                        desc3 = "Issued in May 2023";
+                        desc3 = "Issued on May 2023";
                         desc4 = " ";
 
                         break;
@@ -105,6 +104,51 @@ class certificates {
 
                 arquivo = "ERAD2023.jpg";
 
+                break;
+            case 'JavaSpringBoot-2023':
+                switch (lang) {
+                    case 'pt-br':
+                        titulo = "Curso Online de Java";
+                        desc1 = "Empresa: Rockseat";
+                        desc2 = "Duração: 4 horas";
+                        desc3 = "Emitida em Outubro de 2023";
+                        desc4 = "Código da credencial: 69aa42ef-6251-41ca-9e71-e33803a8a40c";
+
+
+                        break;
+                    case 'us':
+                        titulo = "Online Java Course";
+                        desc1 = "Company: Rockseat";
+                        desc2 = "Duration: 4 hours";
+                        desc3 = "Issued on October 2023";
+                        desc4 = "Credential Code: 69aa42ef-6251-41ca-9e71-e33803a8a40c";
+
+                        break;
+                }
+
+                arquivo = 'JavaSpringBoot-2023.png';
+                break;
+            case 'Cambly':
+                switch (lang) {
+                    case 'pt-br':
+                        titulo = "Certificado de Conclusão Cambly";
+                        desc1 = "Empresa: Cambly";
+                        desc2 = "Duração: 12 horas";
+                        desc3 = "Emitida em Novembro de 2023";
+                        desc4 = "Código da credencial: f3fe2054";
+
+                        break;
+                    case 'us':
+                        titulo = "Cambly Certificate of Accomplishment";
+                        desc1 = "Company: Cambly";
+                        desc2 = "Duration: 12 hours";
+                        desc3 = "Issued on November 2023";
+                        desc4 = "Código da credencial: f3fe2054";
+
+                        break;
+                }
+                
+                arquivo = 'Cambly.png'
             break;
             default:
 
@@ -113,10 +157,10 @@ class certificates {
                 desc1 = "O Curso de codigo <b>" + course + "</b> não foi possível ser encontrado!";
                 desc2 = "Na linguagem <b>" + lang + "</b>!!";
                 desc3 = "Porfavor entre em contato nós enviando essa imagem ao email: ";
-                desc4 = "<a href='mailto:r.m.rothmann@gmail.com?subject=Imagem não encontrada!!&body=" + desc1.replace("<b>","").replace("</b>","") + 
-                " " + desc2.replace("<b>","").replace("</b>","") + "'>r.m.rothmann@gmail.com</a>";
+                desc4 = "<a href='mailto:r.m.rothmann@gmail.com?subject=Imagem não encontrada!!&body=" + desc1.replace("<b>", "").replace("</b>", "") +
+                    " " + desc2.replace("<b>", "").replace("</b>", "") + "'>r.m.rothmann@gmail.com</a>";
 
-            break;
+                break;
 
         }
 
