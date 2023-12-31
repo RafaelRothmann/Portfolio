@@ -176,7 +176,7 @@ class translation {
     }
 
     static traduzirResume(language) {
-        const ids = ["resuM", "ae", "cer", "even","engenharia","school","lssa","LuaUDEMY","MCGITHUB2023","ERAD2023"];
+        const ids = ["resuM", "ae", "cer", "even","engenharia","school","lssa","LuaUDEMY","MCGITHUB2023","ERAD2023","JavaSpringBoot","Cambly"];
         this.traduzirTime(language);
         this.traduzirCredencial(language);
 
@@ -188,7 +188,8 @@ class translation {
                 "Bachelor's Degree in Software Engineering","High School","LSSA - La Salle Santo Antônio School",
                 "Learn to program in Lua",
                 "Basic Concepts of GitHub - Basic Notions of Administration and Product Features",
-                "XXIII Regional High Performance School of the Southern Region"
+                "XXIII Regional High Performance School of the Southern Region",
+                "Online Java Course","Cambly Certificate of Accomplishment"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {
@@ -203,7 +204,7 @@ class translation {
                 "Bacharelado em Engenharia de Software","Ensino Médio Completo","LSSA - Colégio La Salle Santo Antônio",
                 "Aprenda a programar em Lua",
                 "Conceitos Básicos de GitHub - Noções básicas de administração e recursos do produto",
-                "XXIII Escola Regional de Alto Desempenho da Região Sul"
+                "XXIII Escola Regional de Alto Desempenho da Região Sul","Curso Online de Java","Certificado de Conclusão Cambly"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {
