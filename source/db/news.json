@@ -2,38 +2,38 @@
     {
         "n1": {
             "n1-title": [
-                "Curso de Lua",
-                "Course of Lua"
+                "Certificado Cambly",
+                "Cambly Certificate"
             ],
             "n1-org": [
-                "Organização: Udemy",
-                "Company: Udemy"
+                "Organização: Cambly",
+                "Company: Cambly"
             ],
             "n1-time": [
-                "Duração: 4 horas",
-                "Duration: 4 hours"
+                "Duração: 12 horas",
+                "Duration: 12 hours"
             ],
             "n1-link": [
-                "source/pages/certificates.html?lang=pt-br&course=LuaUDEMY",
-                "source/pages/certificates.html?lang=us&course=LuaUDEMY"
+                "source/pages/certificates.html?lang=pt-br&course=Cambly",
+                "source/pages/certificates.html?lang=us&course=Cambly"
             ]
         },
         "n2": {
             "n2-title": [
-                "Curso de GitHub",
-                "Course of GitHub"
+                "Curso Online de Java",
+                "Online Java Course"
             ],
             "n2-org": [
-                "Organização: Microsoft",
-                "Company: Microsoft"
+                "Organização: Rockseat",
+                "Company: Rockseat"
             ],
             "n2-time": [
-                "Duração: 2 horas",
-                "Duration: 2 hours"
+                "Duração: 4 horas",
+                "Duration: 4 hours"
             ],
             "n2-link": [
-                "source/pages/certificates.html?lang=pt-br&course=MCGITHUB2023",
-                "source/pages/certificates.html?lang=us&course=MCGITHUB2023"
+                "source/pages/certificates.html?lang=pt-br&course=JavaSpringBoot-2023",
+                "source/pages/certificates.html?lang=us&course=JavaSpringBoot-2023"
             ]
         },
         "n3": {

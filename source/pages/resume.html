@@ -69,6 +69,31 @@
         </div>
         <div id="courses" class="r">
             <h2 id="cer">Certificados</h2>
+
+            <div class="t">
+                <img class="company" src="../../archive/images/company/cambly.png">
+                <div class="info">
+                    <h3 id="Cambly">Certificado de Conclusão Cambly</h3>
+                    <p>Cambly</p>
+                    <p class="time">Verificação emitida em Nov 2023</p>
+                    <p class="time">Duração: 12 horas</p>
+                    <p class="credencial">Código da credencial: f3fe2054</p>
+                    <button class="credencial" onclick="certificates.openCertificate('Cambly')">Exibir credencial</button>
+                </div>
+            </div>
+
+            <div class="t">
+                <img class="company" src="../../archive/images/company/rocketseat.png">
+                <div class="info">
+                    <h3 id="JavaSpringBoot-2023">Curso Online de Java com Spring Boot</h3>
+                    <p>Rocketseat</p>
+                    <p class="time">Verificação emitida em Out 2023</p>
+                    <p class="time">Duração: 4 horas</p>
+                    <p class="credencial">Código da credencial: 69aa42ef-6251-41ca-9e71-e33803a8a40c</p>
+                    <button class="credencial" onclick="certificates.openCertificate('JavaSpringBoot-2023')">Exibir credencial</button>
+                </div>
+            </div>
+
             <div class="t">
                 <img class="company" src="../../archive/images/company/udemy.png">
                 <div class="info">
@@ -155,21 +180,7 @@
 </body>
 
 <script>
-
-    window.onload = function() {
-     
-        if (location.href.includes("?lang=us")) {
-            translation.mudarIdioma("us", "resume");
-
-        } else if (location.href.includes("?lang=pt-br")) {
-            translation.mudarIdioma("pt-br", "resume");
-        } else {
-            translation.mudarIdioma("pt-br", "resume");
-        }
-
-        sistem.versaoSite();
-    }
-
+    window.onload = sistem.verLinguagem('resume');
 </script>
 
 </html>

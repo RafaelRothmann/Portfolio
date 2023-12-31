@@ -104,9 +104,9 @@
             <div class="news">
                 <a id="n1">
                     <article class="info-news">
-                        <h4 id="n1-title">Curso de Lua</h4>
-                        <h5 id="n1-org">Organização: Udemy</h5>
-                        <p id="n1-time">Duração: 4h</p>
+                        <h4 id="n1-title"></h4>
+                        <h5 id="n1-org"></h5>
+                        <p id="n1-time"></p>
                     </article>
                 </a>
             </div>
@@ -114,9 +114,9 @@
             <div class="news">
                 <a id="n2">
                     <article class="info-news">
-                        <h4 id="n2-title">Curso de GitHub</h4>
-                        <h5 id="n2-org">Organização: Microsoft</h5>
-                        <p id="n2-time">Duração: 1h52min</p>
+                        <h4 id="n2-title"></h4>
+                        <h5 id="n2-org"></h5>
+                        <p id="n2-time"></p>
                     </article>
                 </a>
             </div>
@@ -124,9 +124,9 @@
             <div class="news">
                 <a id="n3">
                     <article class="info-news">
-                        <h4 id="n3-title">Participação Erad</h4>
-                        <h5 id="n3-org">Organização: SBC</h5>
-                        <p id="n3-time">Duração: 24h</p>
+                        <h4 id="n3-title"></h4>
+                        <h5 id="n3-org"></h5>
+                        <p id="n3-time"></p>
                     </article>
                 </a>
             </div>
@@ -183,22 +183,7 @@
 </body>
 
 <script>
-    
-    window.onload = function() {
-     
-        if (location.href.includes("?lang=us")) {
-            translation.mudarIdioma("us", "index");
-        
-        } else if (location.href.includes("?lang=pt-br")) {
-            translation.mudarIdioma("pt-br", "index");
-        } else {
-            translation.mudarIdioma("pt-br", "index");
-        }
-
-        sistem.versaoSite();
-    }
-
-
+    window.onload = sistem.verLinguagem('index');
 </script>
 
 </html>
