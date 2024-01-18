@@ -127,6 +127,10 @@ class translation {
                 projects.mostar(language);
 
             break;
+            case 'contact':
+                this.traduzirContact(language);
+
+            break;
         }
     }
 
@@ -229,6 +233,32 @@ class translation {
         }
     }
 
+    static traduzirContact(language) {
+        const ids = ['tmp-1','tmp-2'];
+
+        switch (language) {
+            case 'us':
+                document.title = "Contact | Rafael Rothmann";
+                const us = ['Page under Construction','Come Back Soon'];
+
+                for (let index = 0; index < ids.length; index++) {
+                    document.getElementById(ids[index]).innerText = us[index];
+                }
+
+                break;
+            case 'pt-br':
+                document.title = "Contato | Rafael Rothmann";
+                const pt_br = ['Página em Construção','Volte em Breve'];
+
+                for (let index = 0; index < ids.length; index++) {
+                    document.getElementById(ids[index]).innerText = pt_br[index];
+                }
+
+
+                break;
+        }
+    }
+
     static traduzirHeadandFooter(language) {
         const ids = ["aboutme", "cv", "project", "contact", "resum2", "allC", "aM", "lN", "cV", "pJ", "cTT", "fA", "eV", "gR", "cR", "projects"];
 
@@ -279,12 +309,12 @@ class translation {
                     archive[1] + "index.html?lang=pt-br#aboutMe",
                     archive[0] + "resume.html?lang=pt-br",
                     archive[0] + "projects.html?lang=pt-br",
-                    "#",
+                    archive[0] + "contact.html?lang=pt-br",
                     archive[1] + "index.html?lang=pt-br#aboutMe",
                     archive[1] + "index.html?lang=pt-br#lastnews",
                     archive[0] + "resume.html?lang=pt-br",
                     archive[0] + "projects.html?lang=pt-br",
-                    "#",
+                    archive[0] + "contact.html?lang=pt-br",
                     archive[0] + "resume.html?lang=pt-br#events",
                     archive[0] + "resume.html?lang=pt-br#graduted",
                     archive[0] + "resume.html?lang=pt-br#courses"
@@ -304,12 +334,12 @@ class translation {
                     archive[1] + "index.html?lang=us#aboutMe",
                     archive[0] + "resume.html?lang=us",
                     archive[0] + "projects.html?lang=us",
-                    "#",
+                    archive[0] + "contact.html?lang=us",
                     archive[1] + "index.html?lang=us#aboutMe",
                     archive[1] + "index.html?lang=us#lastnews",
                     archive[0] + "resume.html?lang=us",
                     archive[0] + "projects.html?lang=us",
-                    "#",
+                    archive[0] + "contact.html?lang=us",
                     archive[0] + "resume.html?lang=us#events",
                     archive[0] + "resume.html?lang=us#graduted",
                     archive[0] + "resume.html?lang=us#courses"
