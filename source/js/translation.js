@@ -1,4 +1,3 @@
-
 class translation {
 
     static news(language) {
@@ -8,49 +7,35 @@ class translation {
             ["n1-time", "n2-time", "n3-time"]
         ];
 
+        var lang;
+
+        if (language == "pt-br") {
+            lang = 0;
+
+        } else if (language == "us") {
+            lang = 1;
+        }
+
         fetch('source/db/news.json').then((response) => {
             response.json().then((news) => {
 
-                if (language == "pt-br") {
-                    const pt_br = [
-                        [news[0].n1[id_news[0][0]][0], news[0].n2[id_news[0][1]][0], news[0].n3[id_news[0][2]][0]],
-                        [news[0].n1["n1-org"][0], news[0].n2["n2-org"][0], news[0].n3["n3-org"][0]],
-                        [news[0].n1["n1-time"][0], news[0].n2["n2-time"][0], news[0].n3["n3-time"][0]]
-                    ];
+                const text = [
+                    [news[0].n1[id_news[0][0]][lang], news[0].n2[id_news[0][1]][lang], news[0].n3[id_news[0][2]][lang]],
+                    [news[0].n1[id_news[1][0]][lang], news[0].n2[id_news[1][1]][lang], news[0].n3[id_news[1][2]][lang]],
+                    [news[0].n1[id_news[2][0]][lang], news[0].n2[id_news[2][1]][lang], news[0].n3[id_news[2][2]][lang]]
+                ];
 
-                    for (let i = 0; i < 3; i++) {
-                        for (let j = 0; j < 3; j++) {
-                            document.getElementById(id_news[i][j]).innerText = pt_br[i][j];
-                        }
+                for (let i = 0; i < 3; i++) {
+                    for (let j = 0; j < 3; j++) {
+                        document.getElementById(id_news[i][j]).innerText = text[i][j];
                     }
-
-                    document.getElementById("n1").href = news[0].n1["n1-link"][0]
-                    document.getElementById("n2").href = news[0].n2["n2-link"][0]
-                    document.getElementById("n3").href = news[0].n3["n3-link"][0]
-
-                } else if (language == "us") {
-                    const us = [
-                        [news[0].n1["n1-title"][1], news[0].n2["n2-title"][1], news[0].n3["n3-title"][1]],
-                        [news[0].n1["n1-org"][1], news[0].n2["n2-org"][1], news[0].n3["n3-org"][1]],
-                        [news[0].n1["n1-time"][1], news[0].n2["n2-time"][1], news[0].n3["n3-time"][1]]
-                    ];
-
-                    for (let i = 0; i < 3; i++) {
-                        for (let j = 0; j < 3; j++) {
-                            document.getElementById(id_news[i][j]).innerText = us[i][j];
-                        }
-                    }
-
-                    document.getElementById("n1").href = news[0].n1["n1-link"][1]
-                    document.getElementById("n2").href = news[0].n2["n2-link"][1]
-                    document.getElementById("n3").href = news[0].n3["n3-link"][1]
                 }
+
+                document.getElementById("n1").href = news[0].n1["n1-link"][lang]
+                document.getElementById("n2").href = news[0].n2["n2-link"][lang]
+                document.getElementById("n3").href = news[0].n3["n3-link"][lang]
             });
         });
-
-
-
-
 
     }
 
@@ -62,7 +47,7 @@ class translation {
 
         if (page == 'index') {
             path = archive[0];
-            this.news(lang);
+            
         } else {
             path = archive[1];
         }
@@ -90,7 +75,6 @@ class translation {
                     }
 
                 };
-
 
                 break;
             case 'us':
@@ -122,7 +106,8 @@ class translation {
         switch (page) {
             case 'index':
                 this.traduzirIndex(language);
-
+                this.news(language);
+                
                 break;
             case 'resume':
                 this.traduzirResume(language);
@@ -139,6 +124,7 @@ class translation {
                 break;
             case 'projects':
                 this.traduzirProjects(language);
+                projects.mostar(language);
 
             break;
         }
