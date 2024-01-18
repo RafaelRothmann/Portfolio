@@ -1,0 +1,9 @@
+#tmp {
+    margin: 130px 0 0 0;
+    display: grid;
+    place-items: center;
+}
+
+#tmp-1, #tmp-2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

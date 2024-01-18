@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Rafael Rothmann</title>
+    <link rel="stylesheet" href="../css/footerandheader.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <script src="../js/translation.js"></script>
+    <script src="../js/sistem.js"></script>
+    <script src="../js/projects.js"></script>
+    <link rel="shortcut icon" href="../../archive/icon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1><a id="home" href="../../index.html">RAFAEL ROTHMANN</a></h1>
+        <nav>
+            <div class="seletion" onmouseover="sistem.mostrarLinguagens()" onmouseout="sistem.esconderLinguagens()">
+                <div id="seleted">
+                    <button disabled>
+                        <img id="principal" class="flag" src="../../archive/images/flags/Flag-Brazil.png">
+                        <p id="1-idioma">Português</p>
+                    </button>
+                </div>
+                <div id="options">
+                    <button id="button-2" onclick="window.location.href='projects.html?lang=us'">
+                        <img id="secundario" class="flag" src="../../archive/images/flags/us-uk-flag.jpg">
+                        <p id="2-idioma">English</p>
+                    </button>
+                </div>
+            </div>
+            <ul>
+                <li><a id="aboutme" href="../../index.html#aboutMe">Sobre Mim</a></li>
+                <li><a id="cv" href="resume.html">Currículo</a></li>
+                <li><a id="project" href="#">Projetos</a></li>
+                <li><a id="contact" href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="projetos"></div>
+
+    <footer>
+        <div id="ft">
+            <div id="resum-footer">
+                <h1>RAFAEL ROTHMANN</h1>
+                <p id="resum2">Tenho 19 anos e este é o meu site de portfolio, onde compartilho os projetos e eventos em
+                    que participei ao longo dos anos. Aqui, você encontrará uma variedade de trabalhos que representam
+                    meu crescimento e dedicação na area da Tecnologia. Espero que essas experiências demonstrem minha
+                    paixão pelo aprendizado e minha determinação em contribuir de forma significativa em diferentes
+                    projetos e eventos.</p>
+            </div>
+            <div id="lin">
+                <ul class="link">
+                    <li>
+                        <h6 id="allC">Todos os Conteúdos</h6>
+                    </li>
+                    <li><a href="../../index.html#aboutMe" id="aM">Sobre mim</a></li>
+                    <li><a href="../../index.html#lastnews" id="lN">Ultimas Noticias</a></li>
+                    <li><a href="resume.html" id="cV">Currículo</a></li>
+                    <li><a href="#" id="pJ">Projetos</a></li>
+                    <li><a href="#" id="cTT">Contato</a></li>
+                </ul>
+                <ul class="link">
+                    <li>
+                        <h6 id="fA">Formação Academica</h6>
+                    </li>
+                    <li><a href="#" id="eV">Eventos</a></li>
+                    <li><a href="#" id="gR">Gradução</a></li>
+                    <li><a href="#" id="cR">Cursos</a></li>
+                </ul>
+                <ul class="link">
+                    <li>
+                        <h6 id="projects">Projetos</h6>
+                    </li>
+                    <li><a href="https://github.com/RafaelRothmann/Portfolio" id="wS" target="_blank">Protifolio</a>
+                    </li>
+                    <li><a href="https://github.com/RafaelRothmann/Chess-System_Java-Project" id="cS"
+                            target="_blank">Chess System</a></li>
+                    <li><a href="https://github.com/RafaelRothmann/Beecrowd-Cpp" id="bC" target="_blank">Beecrowd
+                            Cpp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p id="credits">2023 © Rafael Melo Rothmann</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    window.onload = sistem.verLinguagem('projects');
+</script>
+
+</html>

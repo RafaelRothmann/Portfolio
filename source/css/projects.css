@@ -1,0 +1,53 @@
+#carrocel{
+    margin: 130px 0 0 0;
+}
+
+#projetos a:hover{
+    padding: 15px;
+    border: 2px solid white;
+    transition: 2.5s;
+    place-items: center;
+}
+
+#projetos a:hover img, #projetos a:hover h5{
+    display: flex;
+    
+    max-width: 100%;
+    transition: 1s;
+}
+
+#projetos{
+    margin: 130px 0 0 0;
+    display: grid;
+}
+
+#projetos a{
+    border: 2px solid brown;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 1%;
+    margin: 25px;
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+    transition: 2.5s;
+}
+
+#projetos a img, #projetos a h5{
+    display: none;
+}
+
+#projetos h3{
+    font-size: larger;
+}
+
+#projetos h5 {
+    font-size: smaller;
+    font-style: normal;
+}
+
+#projetos p{
+    font-size: small;
+}
+
+

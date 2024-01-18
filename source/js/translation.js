@@ -1,4 +1,3 @@
-
 class translation {
 
     static news(language) {
@@ -8,49 +7,35 @@ class translation {
             ["n1-time", "n2-time", "n3-time"]
         ];
 
+        var lang;
+
+        if (language == "pt-br") {
+            lang = 0;
+
+        } else if (language == "us") {
+            lang = 1;
+        }
+
         fetch('source/db/news.json').then((response) => {
             response.json().then((news) => {
 
-                if (language == "pt-br") {
-                    const pt_br = [
-                        [news[0].n1[id_news[0][0]][0], news[0].n2[id_news[0][1]][0], news[0].n3[id_news[0][2]][0]],
-                        [news[0].n1["n1-org"][0], news[0].n2["n2-org"][0], news[0].n3["n3-org"][0]],
-                        [news[0].n1["n1-time"][0], news[0].n2["n2-time"][0], news[0].n3["n3-time"][0]]
-                    ];
+                const text = [
+                    [news[0].n1[id_news[0][0]][lang], news[0].n2[id_news[0][1]][lang], news[0].n3[id_news[0][2]][lang]],
+                    [news[0].n1[id_news[1][0]][lang], news[0].n2[id_news[1][1]][lang], news[0].n3[id_news[1][2]][lang]],
+                    [news[0].n1[id_news[2][0]][lang], news[0].n2[id_news[2][1]][lang], news[0].n3[id_news[2][2]][lang]]
+                ];
 
-                    for (let i = 0; i < 3; i++) {
-                        for (let j = 0; j < 3; j++) {
-                            document.getElementById(id_news[i][j]).innerText = pt_br[i][j];
-                        }
+                for (let i = 0; i < 3; i++) {
+                    for (let j = 0; j < 3; j++) {
+                        document.getElementById(id_news[i][j]).innerText = text[i][j];
                     }
-
-                    document.getElementById("n1").href = news[0].n1["n1-link"][0]
-                    document.getElementById("n2").href = news[0].n2["n2-link"][0]
-                    document.getElementById("n3").href = news[0].n3["n3-link"][0]
-
-                } else if (language == "us") {
-                    const us = [
-                        [news[0].n1["n1-title"][1], news[0].n2["n2-title"][1], news[0].n3["n3-title"][1]],
-                        [news[0].n1["n1-org"][1], news[0].n2["n2-org"][1], news[0].n3["n3-org"][1]],
-                        [news[0].n1["n1-time"][1], news[0].n2["n2-time"][1], news[0].n3["n3-time"][1]]
-                    ];
-
-                    for (let i = 0; i < 3; i++) {
-                        for (let j = 0; j < 3; j++) {
-                            document.getElementById(id_news[i][j]).innerText = us[i][j];
-                        }
-                    }
-
-                    document.getElementById("n1").href = news[0].n1["n1-link"][1]
-                    document.getElementById("n2").href = news[0].n2["n2-link"][1]
-                    document.getElementById("n3").href = news[0].n3["n3-link"][1]
                 }
+
+                document.getElementById("n1").href = news[0].n1["n1-link"][lang]
+                document.getElementById("n2").href = news[0].n2["n2-link"][lang]
+                document.getElementById("n3").href = news[0].n3["n3-link"][lang]
             });
         });
-
-
-
-
 
     }
 
@@ -62,7 +47,7 @@ class translation {
 
         if (page == 'index') {
             path = archive[0];
-            this.news(lang);
+            
         } else {
             path = archive[1];
         }
@@ -79,19 +64,17 @@ class translation {
                 buttonSecundario[0].src = path + "us-uk-flag.jpg";
                 buttonSecundario[1].innerHTML = "English";
 
-                if (page != 'certificates') {
+                buttonSecundario[2].onclick = function goToAmerican() {
 
-                    buttonSecundario[2].onclick = function goToAmerican() {
-                        window.location.href = page + ".html?lang=us"
-                    };
-
-                } else {
-
-                    buttonSecundario[2].onclick = function goToAmerican() {
+                    if (location.href.includes("lang=pt-br")) {
                         window.location.href = location.href.replace("lang=pt-br", "lang=us");
-                    };
+                    } else if (location.href.includes("&")) {
+                        window.location.href = page +".html?lang=us" + location.href.substring(location.href.search("&"));
+                    } else {
+                        window.location.href = page +".html?lang=us";
+                    }
 
-                }
+                };
 
                 break;
             case 'us':
@@ -101,19 +84,17 @@ class translation {
                 buttonSecundario[0].src = path + "Flag-Brazil.png";
                 buttonSecundario[1].innerHTML = "Português";
 
-                if (page != 'certificates') {
+                buttonSecundario[2].onclick = function goToBrazil() {
 
-                    buttonSecundario[2].onclick = function goToBrazil() {
-                        window.location.href = page + ".html?lang=pt-br"
-                    };
-
-                } else {
-
-                    buttonSecundario[2].onclick = function goToBrazil() {
+                    if (location.href.includes("lang=us")) {
                         window.location.href = location.href.replace("lang=us", "lang=pt-br");
-                    };
+                    } else if (location.href.includes("&")) {
+                        window.location.href = page +".html?lang=pt-br" + location.href.substring(location.href.search("&"));
+                    } else {
+                        window.location.href = page +".html?lang=pt-br";
+                    }
 
-                }
+                };
 
                 break;
 
@@ -125,7 +106,8 @@ class translation {
         switch (page) {
             case 'index':
                 this.traduzirIndex(language);
-
+                this.news(language);
+                
                 break;
             case 'resume':
                 this.traduzirResume(language);
@@ -133,13 +115,22 @@ class translation {
                 break;
             case 'certificates':
 
-                if(language == 'us'){
-                    document.title="Certificate | Rafael Rothmann";
+                if (language == 'us') {
+                    document.title = "Certificate | Rafael Rothmann";
                 } else if (language == 'pt-br') {
-                    document.title="Certificado | Rafael Rothmann";
+                    document.title = "Certificado | Rafael Rothmann";
                 }
 
                 break;
+            case 'projects':
+                this.traduzirProjects(language);
+                projects.mostar(language);
+
+            break;
+            case 'contact':
+                this.traduzirContact(language);
+
+            break;
         }
     }
 
@@ -176,7 +167,7 @@ class translation {
     }
 
     static traduzirResume(language) {
-        const ids = ["resuM", "ae", "cer", "even","engenharia","school","lssa","LuaUDEMY","MCGITHUB2023","ERAD2023","JavaSpringBoot","Cambly"];
+        const ids = ["resuM", "ae", "cer", "even", "engenharia", "school", "lssa", "LuaUDEMY", "MCGITHUB2023", "ERAD2023", "JavaSpringBoot", "Cambly"];
         this.traduzirTime(language);
         this.traduzirCredencial(language);
 
@@ -185,11 +176,11 @@ class translation {
                 document.title = "Resume | Rafael Rothmann";
 
                 const us = ["I am 19 years old, and I am currently studying Software Engineering at PUCRS. I reside in Porto Alegre, Rio Grande do Sul, actively seeking opportunities to apply and enhance the knowledge gained in the classroom. My passion for programming and software development drives me to pursue an internship that will not only complement my academic background but also provide enriching hands-on experiences. On this page, you will find a detailed record of my academic activities and achievements thus far. ", "Academic Background", "Certificates", "Events",
-                "Bachelor's Degree in Software Engineering","High School","LSSA - La Salle Santo Antônio School",
-                "Learn to program in Lua",
-                "Basic Concepts of GitHub - Basic Notions of Administration and Product Features",
-                "XXIII Regional High Performance School of the Southern Region",
-                "Online Java Course","Cambly Certificate of Accomplishment"
+                    "Bachelor's Degree in Software Engineering", "High School", "LSSA - La Salle Santo Antônio School",
+                    "Learn to program in Lua",
+                    "Basic Concepts of GitHub - Basic Notions of Administration and Product Features",
+                    "XXIII Regional High Performance School of the Southern Region",
+                    "Online Java Course", "Cambly Certificate of Accomplishment"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {
@@ -201,10 +192,10 @@ class translation {
                 document.title = "Currículo | Rafael Rothmann";
 
                 const pt_br = ["Tenho 19 anos, e atualmente curso Engenharia de Software na PUCRS. Resido em Porto Alegre, Rio Grande do Sul, onde busco oportunidades para aplicar e aprimorar os conhecimentos adquiridos em sala de aula. Minha paixão por programação e desenvolvimento de software me motiva a buscar um estágio que não apenas complementará minha formação acadêmica, mas também me proporcionará experiências práticas enriquecedoras. Nesta página, você encontrará um registro detalhado de minhas atividades acadêmicas e conquistas até o momento. ", "Formação acadêmica", "Certificados", "Eventos",
-                "Bacharelado em Engenharia de Software","Ensino Médio Completo","LSSA - Colégio La Salle Santo Antônio",
-                "Aprenda a programar em Lua",
-                "Conceitos Básicos de GitHub - Noções básicas de administração e recursos do produto",
-                "XXIII Escola Regional de Alto Desempenho da Região Sul","Curso Online de Java","Certificado de Conclusão Cambly"
+                    "Bacharelado em Engenharia de Software", "Ensino Médio Completo", "LSSA - Colégio La Salle Santo Antônio",
+                    "Aprenda a programar em Lua",
+                    "Conceitos Básicos de GitHub - Noções básicas de administração e recursos do produto",
+                    "XXIII Escola Regional de Alto Desempenho da Região Sul", "Curso Online de Java", "Certificado de Conclusão Cambly"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {
@@ -216,13 +207,65 @@ class translation {
 
     }
 
+    static traduzirProjects(language) {
+        const ids = [];
+
+        switch (language) {
+            case 'us':
+                document.title = "Projects | Rafael Rothmann";
+                const us = [];
+
+                for (let index = 0; index < ids.length; index++) {
+                    document.getElementById(ids[index]).innerText = us[index];
+                }
+
+                break;
+            case 'pt-br':
+                document.title = "Projetos | Rafael Rothmann";
+                const pt_br = [];
+
+                for (let index = 0; index < ids.length; index++) {
+                    document.getElementById(ids[index]).innerText = pt_br[index];
+                }
+
+
+                break;
+        }
+    }
+
+    static traduzirContact(language) {
+        const ids = ['tmp-1','tmp-2'];
+
+        switch (language) {
+            case 'us':
+                document.title = "Contact | Rafael Rothmann";
+                const us = ['Page under Construction','Come Back Soon'];
+
+                for (let index = 0; index < ids.length; index++) {
+                    document.getElementById(ids[index]).innerText = us[index];
+                }
+
+                break;
+            case 'pt-br':
+                document.title = "Contato | Rafael Rothmann";
+                const pt_br = ['Página em Construção','Volte em Breve'];
+
+                for (let index = 0; index < ids.length; index++) {
+                    document.getElementById(ids[index]).innerText = pt_br[index];
+                }
+
+
+                break;
+        }
+    }
+
     static traduzirHeadandFooter(language) {
         const ids = ["aboutme", "cv", "project", "contact", "resum2", "allC", "aM", "lN", "cV", "pJ", "cTT", "fA", "eV", "gR", "cR", "projects"];
 
 
         switch (language) {
             case 'us':
-                const us = ["About Me", "Resume", "Project", "Contact", "I'am 19 years old and this is my website of portifolio, where I shared the projects and events I have participated in over the years. Here, you will find a variety of works that represent my growth and dedication in the field of Technology. I hope these experiences demonstrate my passion for learning and my determination to contribute meaningfully to variours projects and events.",
+                const us = ["About Me", "Resume", "Projects", "Contact", "I'am 19 years old and this is my website of portifolio, where I shared the projects and events I have participated in over the years. Here, you will find a variety of works that represent my growth and dedication in the field of Technology. I hope these experiences demonstrate my passion for learning and my determination to contribute meaningfully to variours projects and events.",
                     "All Contents", "About Me", "Last News", "Resume", "Projects", "Contact", "Academic Education", "Events", "Graduation", "Courses", "Projects"];
 
                 for (let index = 0; index < ids.length; index++) {
@@ -265,13 +308,13 @@ class translation {
                     archive[1] + "index.html?lang=pt-br",
                     archive[1] + "index.html?lang=pt-br#aboutMe",
                     archive[0] + "resume.html?lang=pt-br",
-                    "#",
-                    "#",
+                    archive[0] + "projects.html?lang=pt-br",
+                    archive[0] + "contact.html?lang=pt-br",
                     archive[1] + "index.html?lang=pt-br#aboutMe",
                     archive[1] + "index.html?lang=pt-br#lastnews",
                     archive[0] + "resume.html?lang=pt-br",
-                    "#",
-                    "#",
+                    archive[0] + "projects.html?lang=pt-br",
+                    archive[0] + "contact.html?lang=pt-br",
                     archive[0] + "resume.html?lang=pt-br#events",
                     archive[0] + "resume.html?lang=pt-br#graduted",
                     archive[0] + "resume.html?lang=pt-br#courses"
@@ -290,13 +333,13 @@ class translation {
                     archive[1] + "index.html?lang=us",
                     archive[1] + "index.html?lang=us#aboutMe",
                     archive[0] + "resume.html?lang=us",
-                    "#",
-                    "#",
+                    archive[0] + "projects.html?lang=us",
+                    archive[0] + "contact.html?lang=us",
                     archive[1] + "index.html?lang=us#aboutMe",
                     archive[1] + "index.html?lang=us#lastnews",
                     archive[0] + "resume.html?lang=us",
-                    "#",
-                    "#",
+                    archive[0] + "projects.html?lang=us",
+                    archive[0] + "contact.html?lang=us",
                     archive[0] + "resume.html?lang=us#events",
                     archive[0] + "resume.html?lang=us#graduted",
                     archive[0] + "resume.html?lang=us#courses"
@@ -313,8 +356,8 @@ class translation {
 
     static traduzirTime(lang) {
         var time = document.getElementsByClassName("time")
-        const pt_br = ["Dez", "Abr", "Fev", "Jul", "Jun", "Maio", "Ago", "Set", "Out", "horas", "hora", "minutos","Duração:","Verificação emitida em"]
-        const us = ["Dec", "Apr", "Feb", "July", "June", "May", "Aug", "Sept", "Oct", "hours", "hour", "minutes","Duration:","Issued on"]
+        const pt_br = ["Dez", "Abr", "Fev", "Jul", "Jun", "Maio", "Ago", "Set", "Out", "horas", "hora", "minutos", "Duração:", "Verificação emitida em"]
+        const us = ["Dec", "Apr", "Feb", "July", "June", "May", "Aug", "Sept", "Oct", "hours", "hour", "minutes", "Duration:", "Issued on"]
 
         switch (lang) {
             case 'us':
@@ -338,8 +381,8 @@ class translation {
 
     static traduzirCredencial(lang) {
         var credencial = document.getElementsByClassName("credencial")
-        const pt_br = ["Código da credencial:","Exibir credencial"]
-        const us = ["Credential Code:","Show Credential"]
+        const pt_br = ["Código da credencial:", "Exibir credencial"]
+        const us = ["Credential Code:", "Show Credential"]
 
         switch (lang) {
             case 'us':
