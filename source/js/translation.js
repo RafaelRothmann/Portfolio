@@ -110,6 +110,7 @@ class translation {
                 
                 break;
             case 'resume':
+                
                 this.traduzirResume(language);
 
                 break;
@@ -167,7 +168,7 @@ class translation {
     }
 
     static traduzirResume(language) {
-        const ids = ["resuM", "ae", "cer", "even", "engenharia", "school", "lssa", "LuaUDEMY", "MCGITHUB2023", "ERAD2023", "JavaSpringBoot", "Cambly"];
+        const ids = ["resuM", "ae", "cer", "even", "engenharia", "school", "lssa", "ERAD2023"];
         this.traduzirTime(language);
         this.traduzirCredencial(language);
 
@@ -177,10 +178,7 @@ class translation {
 
                 const us = ["I am 19 years old, and I am currently studying Software Engineering at PUCRS. I reside in Porto Alegre, Rio Grande do Sul, actively seeking opportunities to apply and enhance the knowledge gained in the classroom. My passion for programming and software development drives me to pursue an internship that will not only complement my academic background but also provide enriching hands-on experiences. On this page, you will find a detailed record of my academic activities and achievements thus far. ", "Academic Background", "Certificates", "Events",
                     "Bachelor's Degree in Software Engineering", "High School", "LSSA - La Salle Santo Antônio School",
-                    "Learn to program in Lua",
-                    "Basic Concepts of GitHub - Basic Notions of Administration and Product Features",
-                    "XXIII Regional High Performance School of the Southern Region",
-                    "Online Java Course", "Cambly Certificate of Accomplishment"
+                    "XXIII Regional High Performance School of the Southern Region"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {
@@ -193,9 +191,7 @@ class translation {
 
                 const pt_br = ["Tenho 19 anos, e atualmente curso Engenharia de Software na PUCRS. Resido em Porto Alegre, Rio Grande do Sul, onde busco oportunidades para aplicar e aprimorar os conhecimentos adquiridos em sala de aula. Minha paixão por programação e desenvolvimento de software me motiva a buscar um estágio que não apenas complementará minha formação acadêmica, mas também me proporcionará experiências práticas enriquecedoras. Nesta página, você encontrará um registro detalhado de minhas atividades acadêmicas e conquistas até o momento. ", "Formação acadêmica", "Certificados", "Eventos",
                     "Bacharelado em Engenharia de Software", "Ensino Médio Completo", "LSSA - Colégio La Salle Santo Antônio",
-                    "Aprenda a programar em Lua",
-                    "Conceitos Básicos de GitHub - Noções básicas de administração e recursos do produto",
-                    "XXIII Escola Regional de Alto Desempenho da Região Sul", "Curso Online de Java", "Certificado de Conclusão Cambly"
+                    "XXIII Escola Regional de Alto Desempenho da Região Sul"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {

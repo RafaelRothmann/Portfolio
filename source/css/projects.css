@@ -11,9 +11,7 @@
 
 #projetos a:hover img, #projetos a:hover h5{
     display: flex;
-    
     max-width: 100%;
-    transition: 1s;
 }
 
 #projetos{
