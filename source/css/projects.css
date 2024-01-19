@@ -1,5 +1,7 @@
-#carrocel{
+#titulo{
     margin: 130px 0 0 0;
+    display: grid;
+    place-items: center;
 }
 
 #projetos a:hover{
@@ -11,13 +13,11 @@
 
 #projetos a:hover img, #projetos a:hover h5{
     display: flex;
-    
     max-width: 100%;
-    transition: 1s;
 }
 
 #projetos{
-    margin: 130px 0 0 0;
+    margin: 25px 0 0 0;
     display: grid;
 }
 

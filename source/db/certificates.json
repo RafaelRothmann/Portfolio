@@ -1,0 +1,38 @@
+[
+    {
+        "img": "../../archive/images/company/cambly.png",
+        "titulo": ["Certificado de Conclusão Cambly","Cambly Certificate of Accomplishment"],
+        "org": "Cambly",
+        "emissao": "Verificação emitida em Nov 2023",
+        "duracao": "Duração: 12 horas",
+        "credencial": "Código da credencial: f3fe2054",
+        "codigo": "Cambly"
+    }, 
+    {
+        "img": "../../archive/images/company/rocketseat.png",
+        "titulo": ["Curso Online de Java","Online Java Course"],
+        "org": "Rocketseat",
+        "emissao": "Verificação emitida em Out 2023",
+        "duracao": "Duração: 4 horas",
+        "credencial": "Código da credencial: 69aa42ef-6251-41ca-9e71-e33803a8a40c",
+        "codigo": "JavaSpringBoot-2023"
+    }, 
+    {
+        "img": "../../archive/images/company/udemy.png",
+        "titulo": ["Aprenda a programar em Lua","Learn to program in Lua"],
+        "org": "Udemy",
+        "emissao": "Verificação emitida em Set 2023",
+        "duracao": "Duração: 4 horas",
+        "credencial": "Código da credencial: UC-fa5e6ff6-148a-4c92-8d9e-8a09e53008d8",
+        "codigo": "LuaUDEMY"
+    },
+    {
+        "img": "../../archive/images/company/microsoft.png",
+        "titulo": ["Conceitos Básicos de GitHub - Noções básicas de administração e recursos do produto","Basic Concepts of GitHub - Basic Notions of Administration and Product Features"],
+        "org": "Microsoft",
+        "emissao": "Verificação emitida em Maio 2023",
+        "duracao": "Duração: 1 hora 52 minutos",
+        "credencial": "",
+        "codigo": "MCGITHUB2023"
+    }
+]

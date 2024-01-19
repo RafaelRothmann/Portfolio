@@ -10,7 +10,9 @@
     <script src="../js/translation.js"></script>
     <script src="../js/sistem.js"></script>
     <script src="../js/certificates.js"></script>
+    <script src="../js/resume.js"></script>
     <link rel="shortcut icon" href="../../archive/icon/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
@@ -69,65 +71,9 @@
         </div>
         <div id="courses" class="r">
             <h2 id="cer">Certificados</h2>
-
-            <div class="t">
-                <img class="company" src="../../archive/images/company/cambly.png">
-                <div class="info">
-                    <h3 id="Cambly">Certificado de Conclusão Cambly</h3>
-                    <p>Cambly</p>
-                    <p class="time">Verificação emitida em Nov 2023</p>
-                    <p class="time">Duração: 12 horas</p>
-                    <p class="credencial">Código da credencial: f3fe2054</p>
-                    <button class="credencial" onclick="certificates.openCertificate('Cambly')">Exibir credencial</button>
-                </div>
-            </div>
-
-            <div class="t">
-                <img class="company" src="../../archive/images/company/rocketseat.png">
-                <div class="info">
-                    <h3 id="JavaSpringBoot">Curso Online de Java com Spring Boot</h3>
-                    <p>Rocketseat</p>
-                    <p class="time">Verificação emitida em Out 2023</p>
-                    <p class="time">Duração: 4 horas</p>
-                    <p class="credencial">Código da credencial: 69aa42ef-6251-41ca-9e71-e33803a8a40c</p>
-                    <button class="credencial" onclick="certificates.openCertificate('JavaSpringBoot-2023')">Exibir credencial</button>
-                </div>
-            </div>
-
-            <div class="t">
-                <img class="company" src="../../archive/images/company/udemy.png">
-                <div class="info">
-                    <h3 id="LuaUDEMY">Aprenda a programar em Lua</h3>
-                    <p>Udemy</p>
-                    <p class="time">Verificação emitida em Set 2023</p>
-                    <p class="time">Duração: 4 horas</p>
-                    <p class="credencial">Código da credencial: UC-fa5e6ff6-148a-4c92-8d9e-8a09e53008d8</p>
-                    <button class="credencial" onclick="certificates.openCertificate('LuaUDEMY')">Exibir credencial</button>
-                </div>
-            </div>
-            <div class="t">
-                <img class="company" src="../../archive/images/company/microsoft.png">
-                <div class="info">
-                    <h3 id="MCGITHUB2023">Conceitos Básicos de GitHub - Noções básicas de administração e recursos do produto</h3>
-                    <p>Microsoft</p>
-                    <p class="time">Verificação emitida em Maio 2023</p>
-                    <p class="time">Duração: 1 hora 52 minutos</p>
-                    <button class="credencial" onclick="certificates.openCertificate('MCGITHUB2023')">Exibir credencial</button>
-                </div>
-            </div>
         </div>
         <div id="events" class="r">
             <h2 id="even">Eventos</h2>
-            <div class="t">
-                <img class="company" src="../../archive/images/company/sbc.png">
-                <div class="info">
-                    <h3 id="ERAD2023">XXIII Escola Regional de Alto Desempenho da Região Sul</h3>
-                    <p>Sociedade Brasileira de Computação - SBC</p>
-                    <p class="time">Verificação emitida em Maio 2023</p>
-                    <p class="time">Duração: 24 horas</p>
-                    <button class="credencial" onclick="certificates.openCertificate('ERAD2023')">Exibir credencial</button>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -180,7 +126,7 @@
 </body>
 
 <script>
-    window.onload = sistem.verLinguagem('resume');
+    window.onload = resume.gerarCertificado();
 </script>
 
 </html>
