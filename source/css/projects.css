@@ -1,5 +1,7 @@
-#carrocel{
+#titulo{
     margin: 130px 0 0 0;
+    display: grid;
+    place-items: center;
 }
 
 #projetos a:hover{
@@ -15,7 +17,7 @@
 }
 
 #projetos{
-    margin: 130px 0 0 0;
+    margin: 25px 0 0 0;
     display: grid;
 }
 

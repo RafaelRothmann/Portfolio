@@ -168,7 +168,7 @@ class translation {
     }
 
     static traduzirResume(language) {
-        const ids = ["resuM", "ae", "cer", "even", "engenharia", "school", "lssa", "ERAD2023"];
+        const ids = ["resuM", "ae", "cer", "even", "engenharia", "school", "lssa"];
         this.traduzirTime(language);
         this.traduzirCredencial(language);
 
@@ -177,8 +177,7 @@ class translation {
                 document.title = "Resume | Rafael Rothmann";
 
                 const us = ["I am 19 years old, and I am currently studying Software Engineering at PUCRS. I reside in Porto Alegre, Rio Grande do Sul, actively seeking opportunities to apply and enhance the knowledge gained in the classroom. My passion for programming and software development drives me to pursue an internship that will not only complement my academic background but also provide enriching hands-on experiences. On this page, you will find a detailed record of my academic activities and achievements thus far. ", "Academic Background", "Certificates", "Events",
-                    "Bachelor's Degree in Software Engineering", "High School", "LSSA - La Salle Santo Antônio School",
-                    "XXIII Regional High Performance School of the Southern Region"
+                    "Bachelor's Degree in Software Engineering", "High School", "LSSA - La Salle Santo Antônio School"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {
@@ -190,8 +189,7 @@ class translation {
                 document.title = "Currículo | Rafael Rothmann";
 
                 const pt_br = ["Tenho 19 anos, e atualmente curso Engenharia de Software na PUCRS. Resido em Porto Alegre, Rio Grande do Sul, onde busco oportunidades para aplicar e aprimorar os conhecimentos adquiridos em sala de aula. Minha paixão por programação e desenvolvimento de software me motiva a buscar um estágio que não apenas complementará minha formação acadêmica, mas também me proporcionará experiências práticas enriquecedoras. Nesta página, você encontrará um registro detalhado de minhas atividades acadêmicas e conquistas até o momento. ", "Formação acadêmica", "Certificados", "Eventos",
-                    "Bacharelado em Engenharia de Software", "Ensino Médio Completo", "LSSA - Colégio La Salle Santo Antônio",
-                    "XXIII Escola Regional de Alto Desempenho da Região Sul"
+                    "Bacharelado em Engenharia de Software", "Ensino Médio Completo", "LSSA - Colégio La Salle Santo Antônio"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {
@@ -204,12 +202,12 @@ class translation {
     }
 
     static traduzirProjects(language) {
-        const ids = [];
+        const ids = ["titulo"];
 
         switch (language) {
             case 'us':
                 document.title = "Projects | Rafael Rothmann";
-                const us = [];
+                const us = ["Projects"];
 
                 for (let index = 0; index < ids.length; index++) {
                     document.getElementById(ids[index]).innerText = us[index];
@@ -218,7 +216,7 @@ class translation {
                 break;
             case 'pt-br':
                 document.title = "Projetos | Rafael Rothmann";
-                const pt_br = [];
+                const pt_br = ["Projetos"];
 
                 for (let index = 0; index < ids.length; index++) {
                     document.getElementById(ids[index]).innerText = pt_br[index];
