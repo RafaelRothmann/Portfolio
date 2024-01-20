@@ -5,6 +5,8 @@
         "org": "Sociedade Brasileira de Computação - SBC",
         "emissao": "Verificação emitida em Maio 2023",
         "duracao": "Duração: 24 horas",
-        "codigo": "ERAD2023"
+        "credencial": null,
+        "codigo": "ERAD2023",
+        "tipo": ".jpg"
     }
 ]
