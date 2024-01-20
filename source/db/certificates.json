@@ -3,11 +3,12 @@
         "img": "../../archive/images/company/cambly.png",
         "titulo": ["Certificado de Conclusão Cambly","Cambly Certificate of Accomplishment"],
         "org": "Cambly",
-        "emissao": "Verificação emitida em Nov 2023",
+        "emissao": "Verificação emitida em Jan 2024",
         "duracao": "Duração: 12 horas",
         "credencial": "Código da credencial: f3fe2054",
         "codigo": "Cambly",
-        "tipo": ".png"
+        "tipo": ".png",
+        "url": "http://www.cambly.com/en/certificate/verify/2fcbd558"
     }, 
     {
         "img": "../../archive/images/company/rocketseat.png",
@@ -17,7 +18,8 @@
         "duracao": "Duração: 4 horas",
         "credencial": "Código da credencial: 69aa42ef-6251-41ca-9e71-e33803a8a40c",
         "codigo": "JavaSpringBoot-2023",
-        "tipo": ".jpg"
+        "tipo": ".png",
+        "url": "https://app.rocketseat.com.br/certificates/69aa42ef-6251-41ca-9e71-e33803a8a40c"
     }, 
     {
         "img": "../../archive/images/company/udemy.png",
@@ -27,7 +29,8 @@
         "duracao": "Duração: 4 horas",
         "credencial": "Código da credencial: UC-fa5e6ff6-148a-4c92-8d9e-8a09e53008d8",
         "codigo": "LuaUDEMY",
-        "tipo": ".jpg"
+        "tipo": ".jpg",
+        "url": "https://www.udemy.com/certificate/UC-fa5e6ff6-148a-4c92-8d9e-8a09e53008d8/"
     },
     {
         "img": "../../archive/images/company/microsoft.png",
@@ -37,6 +40,7 @@
         "duracao": "Duração: 1 hora 52 minutos",
         "credencial": null,
         "codigo": "MCGITHUB2023",
-        "tipo": ".jpg"
+        "tipo": ".jpg",
+        "url": null
     }
 ]

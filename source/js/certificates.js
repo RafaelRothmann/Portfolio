@@ -36,7 +36,7 @@ class certificates {
     static changePage(course, language) {
         translation.mudarIdioma(language, 'certificates');
         sistem.versaoSite();
-        var img, titulo, desc1, desc2, desc3, desc4, lang;
+        var img, titulo, desc1, desc2, desc3, desc4, desc5, lang;
         var found = false;
 
         if (language == 'pt-br') {
@@ -56,8 +56,8 @@ class certificates {
                         desc2 = certificates[index]['emissao'];
                         desc3 = certificates[index]['duracao'];
                         desc4 = certificates[index]['credencial'];
+                        desc5 = certificates[index]['url'];
                         img = "../../archive/images/certificates/certificate-" + certificates[index]['codigo'] + certificates[index]['tipo'];
-
                     }
 
                 }
@@ -65,20 +65,16 @@ class certificates {
                 if (!found) {
                     this.procurarEventos(found, lang, language, course);
                 } else {
-                    this.preencherCampos(titulo, desc1, desc2, desc3, desc4, img, language, found);
+                    this.preencherCampos(titulo, desc1, desc2, desc3, desc4, desc5, img, language, found);
                 }
 
             });
         });
 
-
-
-
     }
 
-
     static procurarEventos(found, lang, language, course) {
-        var img, titulo, desc1, desc2, desc3, desc4, lang;
+        var img, titulo, desc1, desc2, desc3, desc4, desc5, lang;
 
         fetch('../db/events.json').then((response) => {
             response.json().then((events) => {
@@ -91,8 +87,8 @@ class certificates {
                         desc2 = events[index]['emissao'];
                         desc3 = events[index]['duracao'];
                         desc4 = events[index]['credencial'];
+                        desc5 = events[index]['url'];
                         img = "../../archive/images/certificates/certificate-" + events[index]['codigo'] + events[index]['tipo'];
-
 
                     }
 
@@ -108,13 +104,13 @@ class certificates {
                         " " + desc2.replace("<b>", "").replace("</b>", "") + "'>r.m.rothmann@gmail.com</a>";
                 }
 
-                this.preencherCampos(titulo, desc1, desc2, desc3, desc4, img, language, found);
+                this.preencherCampos(titulo, desc1, desc2, desc3, desc4, desc5, img, language, found);
 
             });
         });
     }
 
-    static preencherCampos(titulo, desc1, desc2, desc3, desc4, img, language, found) {
+    static preencherCampos(titulo, desc1, desc2, desc3, desc4, desc5, img, language, found) {
 
         var titleCertificate = document.createElement("h2")
         titleCertificate.innerText = titulo;
@@ -135,8 +131,8 @@ class certificates {
         var desc_1 = document.createElement("p");
         desc_1.id = "desc1";
 
-        if (language == 'pt-br' && found){
-            desc_1.innerText = "Empresa: " + desc1;
+        if (language == 'pt-br' && found) {
+            desc_1.innerText = "Organização: " + desc1;
         } else if (language == 'us' && found) {
             desc_1.innerText = "Company: " + desc1;
         } else {
@@ -144,37 +140,46 @@ class certificates {
         }
 
         div_desc.appendChild(desc_1);
-        
+
         var desc_2 = document.createElement("p");
         desc_2.id = "desc2";
         desc_2.className = "time";
         desc_2.innerHTML = desc2;
-        
 
         div_desc.appendChild(desc_2);
-    
+
         var desc_3 = document.createElement("p");
         desc_3.id = "desc3";
         desc_3.className = "time";
         desc_3.innerHTML = desc3;
-        
 
         div_desc.appendChild(desc_3);
 
-        var desc_4;
+        var desc_4, desc_5;
 
         if (desc4 != null) {
             desc_4 = document.createElement("p");
             desc_4.id = "desc4";
             desc_4.className = "credencial";
             desc_4.innerHTML = desc4;
-            
 
             div_desc.appendChild(desc_4);
         }
 
+        if (desc5 != null) {
+            let a_5 = document.createElement("a");
+            a_5.innerText = desc5;
+            a_5.href = desc5;
+            a_5.target = "_blank";
+
+            desc_5 = document.createElement("p");
+            desc_5.innerText = "Url: "
+            desc_5.appendChild(a_5);
+
+            div_desc.appendChild(desc_5);
+        }
+
         a.appendChild(course);
-        
 
         var section = document.getElementById("certificate");
         section.appendChild(titleCertificate);
@@ -184,6 +189,5 @@ class certificates {
         translation.traduzirTime(language);
         translation.traduzirCredencial(language);
     }
-
 
 }
