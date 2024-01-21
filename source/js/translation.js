@@ -7,7 +7,7 @@ class translation {
             ["n1-time", "n2-time", "n3-time"]
         ];
 
-        var lang;
+        var lang, carregado = 0;
 
         if (language == "pt-br") {
             lang = 0;
@@ -16,27 +16,58 @@ class translation {
             lang = 1;
         }
 
-        fetch('source/db/news.json').then((response) => {
-            response.json().then((news) => {
+        fetch('source/db/certificates.json').then((response) => {
+            response.json().then((certificate) => {
 
-                const text = [
-                    [news[0].n1[id_news[0][0]][lang], news[0].n2[id_news[0][1]][lang], news[0].n3[id_news[0][2]][lang]],
-                    [news[0].n1[id_news[1][0]][lang], news[0].n2[id_news[1][1]][lang], news[0].n3[id_news[1][2]][lang]],
-                    [news[0].n1[id_news[2][0]][lang], news[0].n2[id_news[2][1]][lang], news[0].n3[id_news[2][2]][lang]]
-                ];
+                document.getElementById("n1-title").innerText = certificate[0]['titulo'][lang];
 
-                for (let i = 0; i < 3; i++) {
-                    for (let j = 0; j < 3; j++) {
-                        document.getElementById(id_news[i][j]).innerText = text[i][j];
-                    }
+                if (lang == 0) {
+                    document.getElementById("n1-org").innerText = "Organização: " + certificate[0]['org']
+
+                } else if (lang == 1) {
+                    document.getElementById("n1-org").innerText = "Company: " + certificate[0]['org']
                 }
 
-                document.getElementById("n1").href = news[0].n1["n1-link"][lang]
-                document.getElementById("n2").href = news[0].n2["n2-link"][lang]
-                document.getElementById("n3").href = news[0].n3["n3-link"][lang]
+                document.getElementById("n1-time").innerText = certificate[0]['duracao']
+
+                document.getElementById("n1").href = "source/pages/certificates.html?lang=" + language 
+                + "&course=" +certificate[0]['codigo'];
+                
             });
         });
 
+        fetch('source/db/events.json').then((response) => {
+            response.json().then((events) => {
+
+                document.getElementById("n2-title").innerText = events[0]['titulo'][lang];
+
+                if (lang == 0) {
+                    document.getElementById("n2-org").innerText = "Organização: " + events[0]['org']
+
+                } else if (lang == 1) {
+                    document.getElementById("n2-org").innerText = "Company: " + events[0]['org']
+                }
+
+                document.getElementById("n2-time").innerText = events[0]['duracao']
+
+                document.getElementById("n2").href = "source/pages/certificates.html?lang=" + language 
+                + "&course=" + events[0]['codigo'];
+                this.traduzirTime(language);
+            });
+        });
+
+        fetch('source/db/projects.json').then((response) => {
+            response.json().then((projects) => {
+                document.getElementById("n3-title").innerText = projects[0]['titulo'][lang];
+
+                document.getElementById("n3-org").innerText = projects[0]['linguagens'][lang];
+
+                document.getElementById("n3").href = "source/pages/projects.html?lang=" + language + "#" 
+                + projects[0]['codigo'];                
+            });
+        });
+
+        
     }
 
     static mudarIdioma(lang, page) {
@@ -136,14 +167,15 @@ class translation {
     }
 
     static traduzirIndex(language) {
-        const ids = ["imsd", "me", "resum", "tnews"];
+        const ids = ["imsd", "me", "resum", "tnews", "uc", "ue", "up"];
 
         switch (language) {
             case 'us':
                 document.title = "Home | Rafael Rothmann";
 
                 const us = [
-                    "I'm a Software Developer", "I", "graduated from high school in 2022, and in the following year, I enrolled at the University of Software Engineering. During this period, I improved my skills, resulting in several small projects hosted on GitHub. I possess knowledge of languages such as Java, JavaScript, C++, Lua, HTML, and CSS, as well as Git and UML, which allows me to contribute more effectively to group work.", "Last News"
+                    "I'm a Software Developer", "I", "graduated from high school in 2022, and in the following year, I enrolled at the University of Software Engineering. During this period, I improved my skills, resulting in several small projects hosted on GitHub. I possess knowledge of languages such as Java, JavaScript, C++, Lua, HTML, and CSS, as well as Git and UML, which allows me to contribute more effectively to group work.", "Last News","Last Certificate:", 
+                    "Last Event:","Last Project:"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {
@@ -155,7 +187,7 @@ class translation {
                 document.title = "Início | Rafael Rothmann";
 
                 const ptbr = [
-                    "Eu sou um Desenvolvedor de Software", "Me", "formei no ensino médio em 2022 e, no ano seguinte, ingressei na faculdade de Engenharia de Software. Durante esse período, dediquei-me a aprimorar minhas habilidades técnicas, resultando em diversos mini projetos hospedados no GitHub. Possuo conhecimento sólido em linguagens como Java, Javascript, C++, Lua, HTML e CSS, além de dominar ferramentas como Git e UML, o que me permite contribuir de forma eficaz em projetos de equipe.", "Ultimas Noticias"
+                    "Eu sou um Desenvolvedor de Software", "Me", "formei no ensino médio em 2022 e, no ano seguinte, ingressei na faculdade de Engenharia de Software. Durante esse período, dediquei-me a aprimorar minhas habilidades técnicas, resultando em diversos mini projetos hospedados no GitHub. Possuo conhecimento sólido em linguagens como Java, Javascript, C++, Lua, HTML e CSS, além de dominar ferramentas como Git e UML, o que me permite contribuir de forma eficaz em projetos de equipe.", "Ultimas Noticias","Ultimo Certificado:","Ultimo Evento:", "Ultimo Projeto:"
                 ];
 
                 for (let index = 0; index < ids.length; index++) {

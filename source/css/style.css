@@ -121,8 +121,14 @@
 }
 
 #w{
-    display: flex;
+    display: grid;
     justify-content: center;
+}
+
+#w h3{
+    text-align: center;
+    margin-top: 30px;
+    font-size: medium;
 }
 
 .news{
