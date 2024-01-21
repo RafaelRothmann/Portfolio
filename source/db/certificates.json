@@ -1,6 +1,30 @@
 [
     {
         "img": "../../archive/images/company/alura.png",
+        "titulo": ["Formação: Aprenda a programar em C# com Orientação a Objetos",
+        "Degree: C# and Object Orientation"],
+        "org": "Alura",
+        "emissao": "Verificação emitida em Jan 2024",
+        "duracao": "Duração: 32 horas",
+        "credencial": "Código da credencial: 238a087b-6e1f-4c06-a15e-7b5247b050cc",
+        "codigo": "FORMCSCOMPOO-(1)2024",
+        "tipo": ".png",
+        "url": "https://cursos.alura.com.br/degree/certificate/238a087b-6e1f-4c06-a15e-7b5247b050cc"
+    },
+    {
+        "img": "../../archive/images/company/alura.png",
+        "titulo": ["C#: Consumindo API, Gravando arquivos e Utilizando o LINQ",
+        "C#: Consuming API, Writing Files, and Using LINQ"],
+        "org": "Alura",
+        "emissao": "Verificação emitida em Jan 2024",
+        "duracao": "Duração: 8 horas",
+        "credencial": "Código da credencial: 21fd737c-480b-46ca-add8-fd4756385546",
+        "codigo": "CSAPIELINQ01-(1)2024",
+        "tipo": ".png",
+        "url": "https://cursos.alura.com.br/certificate/21fd737c-480b-46ca-add8-fd4756385546"
+    },
+    {
+        "img": "../../archive/images/company/alura.png",
         "titulo": ["C#: Dominando Orientação a Objetos","C#: Mastering Object-Oriented Programming"],
         "org": "Alura",
         "emissao": "Verificação emitida em Jan 2024",
