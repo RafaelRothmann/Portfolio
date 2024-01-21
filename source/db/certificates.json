@@ -1,14 +1,25 @@
 [
     {
         "img": "../../archive/images/company/alura.png",
+        "titulo": ["C#: Dominando Orientação a Objetos","C#: Mastering Object-Oriented Programming"],
+        "org": "Alura",
+        "emissao": "Verificação emitida em Jan 2024",
+        "duracao": "Duração: 8 horas",
+        "credencial": "Código da credencial: 538ccdb1-343d-4af7-a536-ee621e54e998",
+        "codigo": "CSPOO02-(1)2024",
+        "tipo": ".png",
+        "url": "https://cursos.alura.com.br/certificate/538ccdb1-343d-4af7-a536-ee621e54e998"
+    },
+    {
+        "img": "../../archive/images/company/alura.png",
         "titulo": ["C#: Aplicando a Orientação a Objetos","C#: Applying Object-Oriented Programming"],
         "org": "Alura",
         "emissao": "Verificação emitida em Jan 2024",
         "duracao": "Duração: 8 horas",
         "credencial": "Código da credencial: f4dc398d-7cf0-47a1-ac77-08bf102ebcc0",
-        "codigo": "CSPOO01-12023",
+        "codigo": "CSPOO01-(1)2024",
         "tipo": ".png",
-        "url": "https://cursos.alura.com.br/certificate/f4dc398d-7cf0-47a1-ac77-08bf102ebcc0?lang=en"
+        "url": "https://cursos.alura.com.br/certificate/f4dc398d-7cf0-47a1-ac77-08bf102ebcc0"
     },
     {
         "img": "../../archive/images/company/alura.png",
@@ -17,9 +28,9 @@
         "emissao": "Verificação emitida em Jan 2024",
         "duracao": "Duração: 8 horas",
         "credencial": "Código da credencial: 2eef66a3-476f-436e-97be-e4c507ca80ba",
-        "codigo": "CSPrimeirosPassos-12023",
+        "codigo": "CSPrimeirosPassos-(1)2024",
         "tipo": ".png",
-        "url": "https://cursos.alura.com.br/certificate/2eef66a3-476f-436e-97be-e4c507ca80ba?lang=en"
+        "url": "https://cursos.alura.com.br/certificate/2eef66a3-476f-436e-97be-e4c507ca80ba"
     },
     {
         "img": "../../archive/images/company/cambly.png",
