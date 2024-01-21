@@ -1,11 +1,33 @@
 [
     {
+        "img": "../../archive/images/company/alura.png",
+        "titulo": ["C#: Aplicando a Orientação a Objetos","C#: Applying Object-Oriented Programming"],
+        "org": "Alura",
+        "emissao": "Verificação emitida em Jan 2024",
+        "duracao": "Duração: 8 horas",
+        "credencial": "Código da credencial: f4dc398d-7cf0-47a1-ac77-08bf102ebcc0",
+        "codigo": "CSPOO01-12023",
+        "tipo": ".png",
+        "url": "https://cursos.alura.com.br/certificate/f4dc398d-7cf0-47a1-ac77-08bf102ebcc0?lang=en"
+    },
+    {
+        "img": "../../archive/images/company/alura.png",
+        "titulo": ["C#: Criando Sua Primeira Aplicação","C#: Creating Your First Application"],
+        "org": "Alura",
+        "emissao": "Verificação emitida em Jan 2024",
+        "duracao": "Duração: 8 horas",
+        "credencial": "Código da credencial: 2eef66a3-476f-436e-97be-e4c507ca80ba",
+        "codigo": "CSPrimeirosPassos-12023",
+        "tipo": ".png",
+        "url": "https://cursos.alura.com.br/certificate/2eef66a3-476f-436e-97be-e4c507ca80ba?lang=en"
+    },
+    {
         "img": "../../archive/images/company/cambly.png",
         "titulo": ["Certificado de Conclusão Cambly","Cambly Certificate of Accomplishment"],
         "org": "Cambly",
         "emissao": "Verificação emitida em Jan 2024",
         "duracao": "Duração: 12 horas",
-        "credencial": "Código da credencial: f3fe2054",
+        "credencial": "Código da credencial: 2fcbd558",
         "codigo": "Cambly",
         "tipo": ".png",
         "url": "http://www.cambly.com/en/certificate/verify/2fcbd558"

@@ -14,6 +14,7 @@ class projects {
             response.json().then((project) => {
                 for (let index = 0; index < project.length; index++) {
                     var a = document.createElement("a");
+                    a.id = project[index]['codigo'];
                     a.target = "_blank";
                     a.href = project[index]['url'];
 
