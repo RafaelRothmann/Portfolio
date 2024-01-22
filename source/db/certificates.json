@@ -1,6 +1,18 @@
 [
     {
         "img": "../../archive/images/company/alura.png",
+        "titulo": ["HTTP: Entendendo a Web por Baixo dos Panos",
+        "HTTP: Understanding The Web Under The Hood"],
+        "org": "Alura",
+        "emissao": "Verificação emitida em Jan 2024",
+        "duracao": "Duração: 10 horas",
+        "credencial": "Código da credencial: 24cf0d77-afc2-44d5-aa1f-28cb5106d518",
+        "codigo": "HTTPWEB01-(1)2024",
+        "tipo": ".png",
+        "url": "https://cursos.alura.com.br/certificate/24cf0d77-afc2-44d5-aa1f-28cb5106d518"
+    },
+    {
+        "img": "../../archive/images/company/alura.png",
         "titulo": ["Formação: Aprenda a programar em C# com Orientação a Objetos",
         "Degree: C# and Object Orientation"],
         "org": "Alura",

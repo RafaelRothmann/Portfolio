@@ -57,7 +57,7 @@ class certificates {
                         desc3 = certificates[index]['duracao'];
                         desc4 = certificates[index]['credencial'];
                         desc5 = certificates[index]['url'];
-                        img = "../../archive/images/certificates/certificate-" + certificates[index]['codigo'] + certificates[index]['tipo'];
+                        img = "../../archive/images/certificates/" + certificates[index]['codigo'] + certificates[index]['tipo'];
                     }
 
                 }
@@ -88,7 +88,7 @@ class certificates {
                         desc3 = events[index]['duracao'];
                         desc4 = events[index]['credencial'];
                         desc5 = events[index]['url'];
-                        img = "../../archive/images/certificates/certificate-" + events[index]['codigo'] + events[index]['tipo'];
+                        img = "../../archive/images/certificates/" + events[index]['codigo'] + events[index]['tipo'];
 
                     }
 
