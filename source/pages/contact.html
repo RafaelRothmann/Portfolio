@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/contact.css">
     <script src="../js/translation.js"></script>
     <script src="../js/sistem.js"></script>
+    <script defer src="../js/contact.js"></script>
     <link rel="shortcut icon" href="../../archive/icon/favicon.ico" type="image/x-icon">
 </head>
 
@@ -39,11 +40,49 @@
         </nav>
     </header>
 
-    <div id="tmp">
-        <img src="../../archive/images/other/construcao.png">
-        <h2 id="tmp-1">Pagina em Construção</h2>
-        <h3 id="tmp-2">Volte em Breve</h3>
-    </div>
+    <section id="contact-section">
+
+
+        <form action="https://formsubmit.co/ajax/r.m.rothmann@gmail.com" method="POST" data-form>
+            <h2 id="form-title">Me Envie uma Mensagem</h2>
+
+            <div class="dualform">
+                <div>
+                    <label for="nome" id="name-title">Nome Completo:</label>
+                    <input required type="text" class="formcontract" name="nome" id="nome" autocomplete="additional-name">
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input required type="email" class="formcontract" name="email" id="email" autocomplete="email">
+                </div>
+            </div>
+
+            <div class="dualform">
+                <div>
+                    <label for="empresa" id="company-title">Nome da Empresa:</label>
+                    <input type="text" class="formcontract" name="empresa" id="empresa" autocomplete="organization">
+                </div>
+
+                <div>
+                    <label for="pais" id="country-title">País:</label>
+                    <input required type="text" class="formcontract" name="pais" id="pais" autocomplete="country">
+                </div>
+            </div>
+
+            <div id="msg">
+                <label for="mensagem" id="msg-title">Mensagem:</label>
+                <textarea required name="mensagem" class="formcontract" id="mensagem" cols="30" rows="10"></textarea>
+            </div>
+
+
+            <button type="submit" id="enviar" data-button>Enviar</button>
+            <h1 id="response"></h1>
+        </form>
+
+
+    </section>
+
 
     <footer>
         <div id="ft">
@@ -95,6 +134,8 @@
 
 <script>
     window.onload = sistem.verLinguagem('contact');
+
+    
 </script>
 
 </html>

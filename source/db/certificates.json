@@ -1,6 +1,18 @@
 [
     {
         "img": "../../archive/images/company/alura.png",
+        "titulo": ["Data Science: Analise e Visualização de Dados",
+        "Data Science: Data Analysis and Visualization."],
+        "org": "Alura",
+        "emissao": "Verificação emitida em Fev 2024",
+        "duracao": "Duração: 6 horas",
+        "credencial": "Código da credencial: be2ca7d0-3211-4ce6-868d-ae6f29842de6",
+        "codigo": "DataSciencePY01-(2)2024",
+        "tipo": ".png",
+        "url": "https://cursos.alura.com.br/certificate/be2ca7d0-3211-4ce6-868d-ae6f29842de6"
+    },
+    {
+        "img": "../../archive/images/company/alura.png",
         "titulo": ["HTTP: Entendendo a Web por Baixo dos Panos",
         "HTTP: Understanding The Web Under The Hood"],
         "org": "Alura",

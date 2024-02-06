@@ -1,9 +1,110 @@
-#tmp {
-    margin: 130px 0 0 0;
-    display: grid;
-    place-items: center;
+@media only screen and (max-width: 750px) {
+
+    form{
+        display: grid;
+
+    }
+
+    div.dualform {
+        display: grid;
+        gap: 15px;
+        
+    }
+
+    .dualform div {
+        display: grid;
+        place-items: center;
+    }
+
+    div.dualform div + div{
+        margin-left: 0;
+    }
+
+    div#msg{
+        place-items: center;
+        margin-top: 10px;
+        display: grid;
+    }
+
+    textarea#mensagem {
+        max-width: 100vh;
+        height: 50vh;
+    }
+
 }
 
-#tmp-1, #tmp-2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+@media only screen and (max-width: 463px) {
+
+    textarea#mensagem {
+        max-width: 50vh;
+        height: 310px;
+    }
+
+}
+
+#contact-section form{
+    margin: 150px 0 0 0;
+    display: grid;
+    place-items: center;    
+    gap: 15px;
+}
+
+#msg{
+    margin-top: 10px;
+    display: flex;
+}
+
+#msg label{
+    margin-right: 6px;
+}
+
+input {
+    border-radius: 99px;
+    padding: 5px;
+}
+
+textarea {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.formcontract{
+    border: 1px solid black;
+    font-size: large;
+    color: white;
+}
+
+.dualform  {
+    display: flex;
+}
+
+.dualform div + div{
+    margin-left: 15px;
+}
+
+#mensagem {
+    width: 540px;
+    height: 150px;
+    resize: none;
+    text-align: justify;
+}
+
+.success {
+    color: greenyellow;
+    font-size: medium;
+}
+
+.error{
+    color: tomato;
+    font-size: medium;
+}
+
+#enviar {
+    padding: 5px;
+    border-radius: 99px;
+}
+
+#enviar:disabled{
+    cursor: not-allowed;
 }

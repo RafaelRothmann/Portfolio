@@ -8,11 +8,7 @@
 >
 > O projeto de site online de portfólio serve como minha principal ferramenta de apresentação e demonstração da minha formação acadêmica. Desenvolvido utilizando as principais tecnologias web, como JavaScript, HTML e CSS, o site destaca não apenas meu percurso acadêmico, mas também exemplifica minhas habilidades técnicas e criativas. Com um design intuitivo e elegante, este portfólio online permite aos visitantes explorar meu histórico educacional, projetos realizados e competências adquiridas de maneira eficiente.
 >
-> Tecnologias usadas:
-> JavaScript,
-> Html,
-> Css e
-> Json
+> Tecnologias usadas: JavaScript, Html, Css e Json
 
 > English <img src="archive/images/flags/us-uk-flag.jpg" width=17px>
 >

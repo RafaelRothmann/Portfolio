@@ -1,5 +1,11 @@
 class translation {
 
+    static contact = {
+        success: "Mensagem enviada!",
+        error: "Não foi possível enviar sua mensagem.",
+        sending: "Enviando..."
+      }
+
     static news(language) {
         const id_news = [
             ["n1-title", "n2-title", "n3-title"],
@@ -260,26 +266,33 @@ class translation {
     }
 
     static traduzirContact(language) {
-        const ids = ['tmp-1','tmp-2'];
+        const ids = ['form-title','name-title','company-title','country-title','msg-title','enviar'];
 
         switch (language) {
             case 'us':
                 document.title = "Contact | Rafael Rothmann";
-                const us = ['Page under Construction','Come Back Soon'];
+                const us = ['Send me a message','Full Name:','Company Name:','Country:','Message:','Send'];
 
                 for (let index = 0; index < ids.length; index++) {
                     document.getElementById(ids[index]).innerText = us[index];
                 }
 
+                translation.contact.success = "Message Sent!";
+                translation.contact.error = "Could not send your message!";
+                translation.contact.sending = "Sending...";
+
                 break;
             case 'pt-br':
                 document.title = "Contato | Rafael Rothmann";
-                const pt_br = ['Página em Construção','Volte em Breve'];
+                const pt_br = ['Me envie uma mensagem','Nome Completo:','Nome da Empresa:','País:','Mensagem:','Enviar'];
 
                 for (let index = 0; index < ids.length; index++) {
                     document.getElementById(ids[index]).innerText = pt_br[index];
                 }
 
+                translation.contact.success = "Mensagem enviada!";
+                translation.contact.error = "Não foi possível enviar sua mensagem.";
+                translation.contact.sending = "Enviando...";
 
                 break;
         }
