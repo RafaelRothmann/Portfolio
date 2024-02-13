@@ -8,15 +8,17 @@ class sistem {
         document.getElementById("options").style = "visibility: hidden;";
     }
 
-    static verLinguagem(page) {
+    static async verLinguagem(page_now) {
+        await page.gerrarHeader();
+
         if (location.href.includes("lang=us")) {
-            translation.mudarIdioma("us", page);
+            translation.mudarIdioma("us", page_now);
 
         } else if (location.href.includes("lang=pt-br")) {
-            translation.mudarIdioma("pt-br", page);
+            translation.mudarIdioma("pt-br", page_now);
 
         } else {
-            translation.mudarIdioma("pt-br", page);
+            translation.mudarIdioma("pt-br", page_now);
 
         }
 
@@ -38,16 +40,16 @@ class sistem {
 
         const monthDiff = (startDate, endDate) => Math.max(0, (endDate.getFullYear() - startDate.getFullYear()) * 12 - startDate.getMonth() + endDate.getMonth());
 
-        let diff = monthDiff(data_start,data_end);
+        let diff = monthDiff(data_start, data_end);
 
-        if(diff <= 1) {
+        if (diff <= 1) {
             return "1 mês";
         } else if (diff < 12) {
             return diff + " meses";
         } else if (diff == 12) {
-            return (diff/12) + " ano";
+            return (diff / 12) + " ano";
         } else {
-            return (diff/12) + " anos";
+            return (diff / 12) + " anos";
         }
 
     }

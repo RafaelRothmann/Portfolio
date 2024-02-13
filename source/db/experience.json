@@ -8,7 +8,7 @@
         "modelo": ["Presencial","In-Person"],
         "duracao": {
             "completo":"Fev 2024 - O momento",
-            "inicio": "03/15/2024",
+            "inicio": "02/15/2024",
             "fim": null
         },
         "tags": ["JavaScript","FullStack"]
