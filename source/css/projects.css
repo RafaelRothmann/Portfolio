@@ -7,8 +7,7 @@
 #projetos a:hover{
     padding: 15px;
     border: 2px solid white;
-    transition: 2.5s;
-    place-items: center;
+    transition: 2.5s;  
 }
 
 #projetos a:hover img, #projetos a:hover h5{
@@ -31,10 +30,7 @@
     gap: 15px;
     padding: 15px;
     transition: 2.5s;
-}
-
-#projetos a img, #projetos a h5{
-    display: none;
+    place-items: center;
 }
 
 #projetos h3{
