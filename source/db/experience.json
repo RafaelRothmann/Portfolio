@@ -1,0 +1,16 @@
+[
+    {
+        "img": "../../archive/images/company/fujica.png",
+        "empresa":"Fujica System do Brasil",
+        "localizacao": ["Porto Alegre, Rio Grande do Sul, Brasil","Porto Alegre, Rio Grande do Sul, Brazil"],
+        "titulo": ["Desenvolvedor Full Stack","Full Stack Developer"],
+        "tipo": ["Estágio","Internship"],
+        "modelo": ["Presencial","In-Person"],
+        "duracao": {
+            "completo":"Fev 2024 - O momento",
+            "inicio": "02/15/2024",
+            "fim": null
+        },
+        "tags": ["JavaScript","FullStack"]
+    }
+]

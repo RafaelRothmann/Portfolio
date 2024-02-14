@@ -18,7 +18,9 @@ class certificates {
         window.location.href = "certificates.html?" + lang + "&" + course;
     }
 
-    static seeCertificate() {
+    static async seeCertificate() {
+        await page.gerrarHeader();
+
         var params = {};
 
         location.search.slice(1).split("&").forEach(function (pair) {

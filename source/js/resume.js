@@ -3,7 +3,7 @@ class resume {
     static langResume() {
         if (location.href.includes("pt-br")) {
             return 0;
-        } else if (location.href.includes("us")){
+        } else if (location.href.includes("us")) {
             return 1;
         } else {
             return 0;
@@ -12,7 +12,6 @@ class resume {
 
     static gerarCertificado() {
 
-        sistem.verLinguagem('resume');
         var language = this.langResume();
 
         fetch('../db/certificates.json').then((response) => {
@@ -119,13 +118,58 @@ class resume {
                     div.appendChild(img);
                     div.appendChild(div_info);
 
-                    document.getElementById("events").appendChild(div);          
+                    document.getElementById("events").appendChild(div);
+
+                }
+                this.gerrarExperiencias(language);
+            })
+        })
+
+    }
+
+    static gerrarExperiencias(language) {
+        fetch("../db/experience.json").then((response) => {
+            response.json().then((experience) => {
+                for (let i = 0; i < experience.length; i++) {
+                    let img = document.createElement("img");
+                    img.src = experience[i]["img"];
+                    img.className = "company";
+
+                    let div_info = document.createElement("div")
+                    div_info.className = "info";
+
+                    let h3 = document.createElement("h3");
+                    h3.innerText = experience[i]["titulo"][language];
+
+                    let p_desc = document.createElement("p");
+                    p_desc.innerText = experience[i]["empresa"] + " · " + experience[i]["tipo"][language];
+
+                    let data = experience[i]["duracao"];
+
+                    let p_time = document.createElement("p");
+                    p_time.innerText = data["completo"] + " · " + sistem.calcTime(data["inicio"], data["fim"])
+                    p_time.className = "time";
+
+                    let p_end = document.createElement("p");
+                    p_end.innerText = experience[i]["localizacao"][language] + " · " + experience[i]["modelo"][language];
                     
+                    let div_t = document.createElement("div");
+                    div_t.className = "t";
+
+                    div_info.appendChild(h3);
+                    div_info.appendChild(p_desc);
+                    div_info.appendChild(p_time);
+                    div_info.appendChild(p_end);
+
+                    div_t.appendChild(img);
+                    div_t.appendChild(div_info);
+
+                    document.getElementById("work").appendChild(div_t)
+
                 }
                 sistem.verLinguagem('resume');
             })
-        })
-        
+        });
     }
 
 }
