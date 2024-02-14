@@ -1,3 +1,10 @@
+@media only screen and (max-width: 750px) {
+    div#projetos a img, div#projetos a h5 {
+        display: none;
+    }
+
+}
+
 #titulo{
     margin: 130px 0 0 0;
     display: grid;

@@ -140,9 +140,6 @@ class page {
 
         footer.appendChild(div_ft)
         footer.appendChild(div_c)
-
-        console.log(footer)
-
     }
 }
 
