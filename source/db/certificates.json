@@ -1,8 +1,20 @@
 [
     {
         "img": "../../archive/images/company/alura.png",
+        "titulo": ["Amazon S3: Manipule e Armazene Objetos na Nuvem",
+        "Amazon S3: Manipulate and Store Objects in the Cloud"],
+        "org": "Alura",
+        "emissao": "Verificação emitida em Fev 2024",
+        "duracao": "Duração: 8 horas",
+        "credencial": "Código da credencial: d6f8063a-e4b4-4816-9113-769bb5cc4087",
+        "codigo": "AWSS301-(2)2024",
+        "tipo": ".png",
+        "url": "https://cursos.alura.com.br/certificate/d6f8063a-e4b4-4816-9113-769bb5cc4087"
+    },
+    {
+        "img": "../../archive/images/company/alura.png",
         "titulo": ["Data Science: Analise e Visualização de Dados",
-        "Data Science: Data Analysis and Visualization."],
+        "Data Science: Data Analysis and Visualization"],
         "org": "Alura",
         "emissao": "Verificação emitida em Jan 2024",
         "duracao": "Duração: 6 horas",
