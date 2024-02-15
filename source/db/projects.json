@@ -9,12 +9,13 @@
             "The Spring Boot application project is an example that leverages Java EE, Spring Boot, in-memory H2 database, JPA, and Maven technologies. This application serves as a model for a Web Service system for a virtual store. It stores customer data, order records, order categories, and payment information. All this data can be queried and created at any time, providing efficient and flexible management for the virtual store."
         ],
         "linguagens": [
-            "Tecnologias usadas: Java EE, Spring Boot, Banco de Dados H2, JPA, Json e Maven",
-            "Technologies used: Java EE, Spring Boot, Database H2, JPA, Json and Maven"
+            "Tecnologias usadas: Java EE, Spring Boot, Banco de Dados H2, JPA e Maven",
+            "Technologies used: Java EE, Spring Boot, Database H2, JPA and Maven"
         ],
         "img": "../../archive/images/projects/web-service-springboot.png",
         "url": "https://github.com/RafaelRothmann/Web-Service",
-        "codigo": "WebService-springboot-2023"
+        "codigo": "WebService-springboot-2023",
+        "tags":["Java","Spring Boot","Database H2","JPA","Maven"]
     },
     {
         "titulo": [
@@ -26,11 +27,12 @@
             "The online portfolio website project serves as my primary tool for presentation and demonstration of my academic background. Developed using key web technologies, such as JavaScript, HTML, and CSS, the site highlights not only my academic journey but also exemplifies my technical and creative skills. With an intuitive and elegant design, this online portfolio allows visitors to efficiently explore my educational background, completed projects, and acquired skills."
         ],
         "linguagens": [
-            "Tecnologias usadas: JavaScript, Html, Css e Json",
-            "Technologies used: JavaScript, Html, Css and Json"
+            "Tecnologias usadas: JavaScript, Html, Css",
+            "Technologies used: JavaScript, Html, Css"
         ],
         "img": "../../archive/images/projects/website-portifolio.png",
         "url": "https://github.com/RafaelRothmann/Portfolio",
-        "codigo": "portifolio"
+        "codigo": "portifolio",
+        "tags": ["JavaScript","Html","Css"]
     }
 ]

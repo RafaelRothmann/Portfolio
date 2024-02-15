@@ -10,8 +10,6 @@ class projects {
             lang = 1;
         }
 
-
-
         fetch('../db/projects.json').then((response) => {
             response.json().then((project) => {           
                 for (let index = 0; index < project.length; index++) {
