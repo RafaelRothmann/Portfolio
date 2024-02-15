@@ -2,7 +2,7 @@ class projects {
 
     static mostar(language){
 
-        var lang;
+        var lang, array;
 
         if(language == 'pt-br') {
             lang = 0;
@@ -10,8 +10,10 @@ class projects {
             lang = 1;
         }
 
+
+
         fetch('../db/projects.json').then((response) => {
-            response.json().then((project) => {
+            response.json().then((project) => {           
                 for (let index = 0; index < project.length; index++) {
                     var a = document.createElement("a");
                     a.id = project[index]['codigo'];

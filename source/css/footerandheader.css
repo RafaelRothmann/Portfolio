@@ -157,6 +157,9 @@ header .seletion p {
     float: right;
 }
 
+header button:disabled{
+    border: none;
+}
 
 #seleted {
     margin-top: 10px;

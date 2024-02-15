@@ -47,6 +47,25 @@ a{
 
 .info button{
     margin-top: 10px;
+    padding: 5px;
+    border-radius: 99px;
+    border: none;
+    background-color: brown;
+
+    & .link-img{
+        width: 14px;
+        margin-left: 5px;
+        background-color: brown;
+    }
+
+}
+
+.info button:active{
+    background-color: rgb(90, 24, 24);
+
+    & .link-img{
+        background-color: rgb(90, 24, 24);
+    }
 }
 
 .info h3{
@@ -61,8 +80,16 @@ a{
     margin: 75px 0 0 100px;
 }
 
+img.company::selection{
+    background-color: #ff4a57;
+}
+
 .company{
     width: 50px;
     height: 50px;
     border: #ff4a57 1px solid;
+}
+
+.link-img::selection{
+    background-color: transparent;
 }

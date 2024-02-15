@@ -5,6 +5,47 @@
 
 }
 
+#filtro{
+    display: grid;
+    gap: 15px;
+    place-items: center;
+    margin: 30px 0;
+}
+
+#filtro div{
+    border-top: 1px solid brown;
+    padding: 10px;
+}
+
+#filtro button + button{
+    margin: 0 15px;
+}
+
+#filtro button:disabled{
+    background-color: rgb(90, 24, 24);
+    cursor: not-allowed;
+}
+
+#filtro button:disabled:active{
+    background-color: rgb(90, 24, 24);
+}
+
+#filtro button{
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 99px;
+    background-color: brown;
+    border: none;
+}
+
+#filtro button:active{
+    background-color: rgb(90, 24, 24);
+}
+
+#filtro button::selection{
+    background-color: transparent;
+}
+
 #titulo{
     margin: 130px 0 0 0;
     display: grid;
