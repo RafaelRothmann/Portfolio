@@ -7,9 +7,9 @@
         "tipo": ["Estágio","Internship"],
         "modelo": ["Presencial","In-Person"],
         "duracao": {
-            "completo":"Fev 2024 - O momento",
+            "completo":"Fev 2024 - Maio 2024",
             "inicio": "02/15/2024",
-            "fim": null
+            "fim": "05/15/2024"
         },
         "tags": ["JavaScript","FullStack"]
     }

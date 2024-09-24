@@ -1,5 +1,41 @@
 [
     {
+        "img": "../../archive/images/company/ticemtrilhas.png",
+        "titulo": ["Introdução ao Aprendizado de Máquina",
+        "Introduction to Machine Learning"],
+        "org": "Tic em Trilhas",
+        "emissao": "Verificação emitida em Set 2024",
+        "duracao": "Duração: 48 horas",
+        "credencial": "Código da credencial: f007b45b-59f5-4b79-a2e7-666868c903a4",
+        "codigo": "Tic01ML",
+        "tipo": ".jpg",
+        "url": "https://ticemtrilhas.org.br/certificate-validation?code=f007b45b-59f5-4b79-a2e7-666868c903a4"
+    },
+    {
+        "img": "../../archive/images/company/ticemtrilhas.png",
+        "titulo": ["Introdução à Inteligência Artificial",
+        "Introduction to Artificial Intelligence"],
+        "org": "Tic em Trilhas",
+        "emissao": "Verificação emitida em Set 2024",
+        "duracao": "Duração: 56 horas",
+        "credencial": "Código da credencial: 0c34ae6b-8755-4879-9544-880e8af77a38",
+        "codigo": "Tic01IA",
+        "tipo": ".jpg",
+        "url": "https://ticemtrilhas.org.br/certificate-validation?code=0c34ae6b-8755-4879-9544-880e8af77a38"
+    },
+    {
+        "img": "../../archive/images/company/ticemtrilhas.png",
+        "titulo": ["Fundamentos em teste de software",
+        "Fundamentals of Software Testing"],
+        "org": "Tic em Trilhas",
+        "emissao": "Verificação emitida em Set 2024",
+        "duracao": "Duração: 24 horas",
+        "credencial": "Código da credencial: e8f06852-6eff-4780-95f1-c1fe9ce7b472",
+        "codigo": "Tic01Teste",
+        "tipo": ".jpg",
+        "url": "https://ticemtrilhas.org.br/certificate-validation?code=e8f06852-6eff-4780-95f1-c1fe9ce7b472"
+    },
+    {
         "img": "../../archive/images/company/alura.png",
         "titulo": ["Amazon S3: Manipule e Armazene Objetos na Nuvem",
         "Amazon S3: Manipulate and Store Objects in the Cloud"],
