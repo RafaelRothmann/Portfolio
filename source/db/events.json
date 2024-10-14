@@ -1,5 +1,16 @@
 [
     {
+        "img": "../../archive/images/company/tecnopuc.png",
+        "titulo": ["Tecnopuc Experience 2024","Tecnopuc Experience 2024"],
+        "org": "TECNPUC",
+        "emissao": "Verificação emitida em Out 2024",
+        "duracao": "Duração: 12 horas",
+        "credencial": null,
+        "codigo": "TecnopucExp2024",
+        "tipo": ".jpg",
+        "url": null
+    },
+    {
         "img": "../../archive/images/company/sbc.png",
         "titulo": ["XXIII Escola Regional de Alto Desempenho da Região Sul","XXIII Regional High Performance School of the Southern Region"],
         "org": "Sociedade Brasileira de Computação - SBC",
